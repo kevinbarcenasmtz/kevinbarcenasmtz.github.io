@@ -1,0 +1,58 @@
+.toc-container {
+  position: sticky;
+  top: 40px;
+  font-size: 14px;
+}
+
+.toc-links {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.toc-link {
+  position: relative;
+  padding: 8px 0;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+  z-index: 2;
+}
+
+.toc-link:hover {
+  color: #333;
+}
+
+.toc-link.active {
+  color: royalblue;
+  font-weight: 500;
+}
+
+.toc-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.thumb-indicator {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: royalblue;
+  transition: top 0.3s ease, height 0.3s ease;
+  will-change: top, height;
+}
+
+.toc-static-line {
+  position: absolute;
+  top: 0;
+  left: 12px; /* Match offset used in getLineOffset for depth 1 */
+  width: 1px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
