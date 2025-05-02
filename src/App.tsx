@@ -1,6 +1,7 @@
-// Modified App.tsx to use the new resume components
+// src/App.tsx
 import { useEffect, useRef, useState } from 'react';
 import TableOfContents from './components/sidebar/TableOfContents';
+import MobileNav from './components/sidebar/MobileNav';
 import ProfileSection from './components/resume/ProfileSection';
 import EducationSection from './components/resume/EducationSection';
 import ExperienceItem from './components/resume/ExperienceSection';
@@ -75,6 +76,23 @@ const footballProject = {
 export default function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRefs = useRef<HTMLElement[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if we're on mobile on initial render and when window resizes
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    // Initial check
+    checkMobile();
+    
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -97,11 +115,29 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
+  // Create a download resume button with responsive styling
+  const ResumeButton = () => (
+    <a 
+      href="/resume.pdf" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="resume-button"
+    >
+      Download Resume (PDF)
+    </a>
+  );
+
   return (
     <div className="container">
-      <aside className="sidebar">
-        <TableOfContents items={tocItems} activeIndex={activeIndex} />
-      </aside>
+      {isMobile ? (
+        <MobileNav>
+          <TableOfContents items={tocItems} activeIndex={activeIndex} />
+        </MobileNav>
+      ) : (
+        <aside className="sidebar">
+          <TableOfContents items={tocItems} activeIndex={activeIndex} />
+        </aside>
+      )}
 
       <main className="main">
         <section
@@ -210,24 +246,7 @@ export default function App() {
           <p>
             You can download my full resume as a PDF by clicking the link below:
           </p>
-          <p>
-            <a 
-              href="/resume.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{ 
-                display: 'inline-block', 
-                margin: '1rem 0', 
-                padding: '0.5rem 1rem', 
-                background: 'royalblue', 
-                color: 'white', 
-                textDecoration: 'none',
-                borderRadius: '4px'
-              }}
-            >
-              Download Resume (PDF)
-            </a>
-          </p>
+          <ResumeButton />
         </section>
       </main>
     </div>

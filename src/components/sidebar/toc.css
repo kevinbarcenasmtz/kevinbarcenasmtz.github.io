@@ -56,3 +56,25 @@
   background-color: #317039;
   z-index: 0;
 }
+/* src/components/sidebar/toc.css - add these styles */
+@media (max-width: 768px) {
+  .toc-container {
+    width: 100%;
+  }
+  
+  .toc-link {
+    padding: 8px 0; /* Larger tap targets for mobile */
+    font-size: 16px; /* Slightly larger font for readability */
+  }
+  
+  /* Simplify the visualization on mobile */
+  .toc-thumb {
+    opacity: 0.3; /* Make the line indicators subtler */
+  }
+  
+  .thumb-indicator {
+    background-color: royalblue; /* Make active indicator more visible */
+    left: 2px;
+    width: 4px; /* Thicker indicator */
+  }
+}

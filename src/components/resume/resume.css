@@ -72,3 +72,54 @@
 .contact-info a:hover {
   text-decoration: underline;
 }
+
+/* Add these responsive styles to src/components/resume/resume.css */
+@media (max-width: 768px) {
+  .profile-section h1 {
+    font-size: 24px;
+  }
+  
+  .details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .details span {
+    margin-bottom: 0.25rem;
+  }
+  
+  .experience-description li, 
+  .project-description li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+  
+  /* Adjust spacing for mobile */
+  .education-section, 
+  .experience-item, 
+  .project-item {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-section h1 {
+    font-size: 22px;
+  }
+  
+  /* Further reduce margins on smallest screens */
+  .education-section, 
+  .experience-item, 
+  .project-item {
+    margin-bottom: 1rem;
+  }
+  
+  /* Make buttons more tappable */
+  a[href="/resume.pdf"] {
+    padding: 0.75rem 1.5rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

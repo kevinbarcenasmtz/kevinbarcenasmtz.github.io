@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   background: #fffbeb;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
@@ -16,6 +16,7 @@ body {
   padding: 20px;
   overflow-y: auto;
   border-right: 1px solid #eee;
+  transition: transform 0.3s ease;
 }
 
 .main {
@@ -75,4 +76,106 @@ body {
 .section h2 {
   font-size: 24px;
   margin-bottom: 16px;
+}
+
+/* Mobile menu toggle button */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: royalblue;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background: white;
+    z-index: 99;
+    transform: translateX(-100%);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .main {
+    padding: 20px;
+    margin-top: 60px; /* Space for fixed menu button */
+  }
+  
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section {
+    min-height: auto; /* Allow sections to be any height on mobile */
+    padding-top: 40px; /* Reduce top padding */
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .main {
+    padding: 15px;
+  }
+  
+  .section h2 {
+    font-size: 20px;
+  }
+}
+/* Add to index.css */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+}
+
+.resume-button {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background: royalblue;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+  background-color: #2a4db0;
+}
+
+@media (max-width: 768px) {
+  .resume-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+  }
 }
