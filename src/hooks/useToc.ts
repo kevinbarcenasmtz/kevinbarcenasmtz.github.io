@@ -17,7 +17,7 @@ export type TocInfo = {
 export function useToc(
   items: TocItem[],
   activeIndex: number,
-  containerRef: RefObject<HTMLDivElement>
+  containerRef: RefObject<HTMLDivElement | null>
 ): TocInfo {
   const [tocInfo, setTocInfo] = useState<TocInfo>({
     path: '',
