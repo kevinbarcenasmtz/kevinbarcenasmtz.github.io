@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: #f9f9f9;
+  background: #fffbeb;
   overflow: hidden;
 }
 
@@ -45,7 +45,7 @@ body {
   left: -20px;
   width: 14px;
   height: 20px;
-  background-color: royalblue;
+  background-color: #317039;
   transition: transform 0.3s ease;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;

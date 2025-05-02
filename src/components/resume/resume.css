@@ -1,0 +1,74 @@
+/* src/components/resume/resume.css */
+/* Minimal styling for resume components */
+
+.profile-section {
+  margin-bottom: 2rem;
+}
+
+.profile-section h1 {
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #444;
+  margin-bottom: 0.25rem;
+}
+
+.location {
+  color: #666;
+}
+
+.education-section, .experience-item, .project-item {
+  margin-bottom: 2rem;
+}
+
+.degree, .company, .project-tech {
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.experience-header, .project-header {
+  margin-bottom: 1rem;
+}
+
+.period, .project-date {
+  color: #666;
+  font-style: italic;
+}
+
+.experience-description li, .project-description li {
+  margin-bottom: 0.5rem;
+}
+
+.skill-category {
+  margin-bottom: 1rem;
+}
+
+.skill-category h4 {
+  margin-bottom: 0.25rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-label {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.contact-info a {
+  color: royalblue;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}

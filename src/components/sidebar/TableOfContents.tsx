@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { useToc, type TocItem } from '../hooks/useToc';
+import { useToc, type TocItem } from '../../hooks/useToc';
 import './toc.css';
 
 type Props = {

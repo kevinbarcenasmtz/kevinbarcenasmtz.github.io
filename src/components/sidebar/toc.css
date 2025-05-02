@@ -1,6 +1,6 @@
 .toc-container {
   position: sticky;
-  top: 40px;
+  top: 10px;
   font-size: 14px;
 }
 
@@ -14,8 +14,8 @@
 
 .toc-link {
   position: relative;
-  padding: 8px 0;
-  color: #666;
+  padding: 4px 0;
+  color: #524e4e;
   text-decoration: none;
   transition: color 0.2s;
   z-index: 2;
@@ -26,8 +26,8 @@
 }
 
 .toc-link.active {
-  color: royalblue;
-  font-weight: 500;
+  color: #317039;
+  font-weight: 800;
 }
 
 .toc-thumb {
@@ -42,8 +42,8 @@
   position: absolute;
   left: 0;
   width: 100%;
-  background-color: royalblue;
-  transition: top 0.3s ease, height 0.3s ease;
+  background-color: #317039;
+  transition: top 0.6s ease, height 0.3s ease;
   will-change: top, height;
 }
 
@@ -53,6 +53,6 @@
   left: 12px; /* Match offset used in getLineOffset for depth 1 */
   width: 1px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #317039;
   z-index: 0;
 }
