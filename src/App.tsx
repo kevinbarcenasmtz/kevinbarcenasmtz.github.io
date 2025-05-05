@@ -27,15 +27,15 @@ const tocItems = [
 const skills = [
   { 
     category: 'Technical Skills', 
-    skills: 'Python, TypeScript, Java, C, Objective-C, Swift, HTML/CSS, NLTK, CLTK, Pandas, NumPy' 
+    skills: 'Python, TypeScript, Javascript, Java, C, Objective-C, Swift, HTML/CSS, NLTK, CLTK, Pandas, NumPy' 
   },
   { 
     category: 'Frameworks & Tools', 
-    skills: 'Next.js, React Native, Expo, MongoDB, MySQL, Firebase, Supabase, NextAuth, Google Cloud Platform, Docker, AWS, Xcode' 
+    skills: 'Next.js, React Native, Expo, MongoDB, MySQL, PostgresSQL, Firebase, Supabase, NextAuth, Google Cloud Platform, Docker, AWS, Xcode' 
   },
   { 
     category: 'Languages', 
-    skills: 'Spanish (Fluent), English (Native)' 
+    skills: 'Spanish (Native), English (Native)' 
   }
 ];
 
@@ -150,9 +150,27 @@ export default function App() {
           <h2>About Me</h2>
           <ProfileSection />
           <p>
-            Computer Science & Linguistics student at the University of Texas at Austin,
-            passionate about building web and mobile applications. 
-            I combine my technical skills with linguistic knowledge to create innovative solutions.
+            As a Mexican-American from Austin, Texas, with both parents who immigrated from Mexico, 
+            I've grown up with the advantage of being bilingual. This bilingualism has profoundly shaped my 
+            outlook on life, my identity, and my personal ideals. It has influenced my journey in higher
+            education after high school. You see, it is not entirely common for Mexican young adults to pursue 
+            education beyond high school. For various reasons, but I can provide more context for that later. 
+            On a similar note I believe that having the opportunity to learn 
+            is a privilege and more importantly, a way I can inspire and influence young teens to continue their 
+            educational journey. The critical question becomes: What do I do with the knowledge I'm acquiring? I feel 
+            the best way to use my skills and contribute to society is to create meaningful, useful solutions for people. 
+            This is precisely why I've focused my studies on computer science, which laid the foundation for me to develop websites, 
+            apps, and software that can serve communities. My study of linguistics further enhances this foundation by applying 
+            technological solutions to language specific challenges, problems, and tasks that can be uniquely addressed through 
+            the intersection of computer science and linguistics.
+          </p>
+          <p>
+          Another characteristic that I strive to uphold is my personal code of ethics. While this varies by 
+          individual, I believe there is a near universal human consensus around protecting one's family, children, 
+          and loved ones. For me, this translates into being overly conscious about the things I purchase and the 
+          things I support. People often say to "vote with your wallet," but in the tech industry, I think a quote on the same note would be
+          "build/vote with your tech stack." As I continue to develop technological solutions, I am committed to
+          being mindful of the tools I choose and fully understanding the broader implications of those choices.
           </p>
         </section>
 
@@ -187,7 +205,7 @@ export default function App() {
         >
           <h2>Projects</h2>
           <p>
-            These are some of the projects I've worked on that demonstrate my technical skills and problem-solving abilities.
+            These are some of the projects I've worked on that I'm particularly proud of.
           </p>
         </section>
 
@@ -212,6 +230,8 @@ export default function App() {
           <h2>Empire Football League Platform</h2>
           <ProjectItem {...footballProject} />
         </section>
+
+
 
         <section
           id="experience"
@@ -248,6 +268,7 @@ export default function App() {
           </p>
           <ResumeButton />
         </section>
+
       </main>
     </div>
   );

@@ -73,7 +73,7 @@
   }
   
   .thumb-indicator {
-    background-color: royalblue; /* Make active indicator more visible */
+    background-color: #317309; /* Make active indicator more visible */
     left: 2px;
     width: 4px; /* Thicker indicator */
   }

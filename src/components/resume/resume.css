@@ -13,6 +13,11 @@
   color: #444;
   margin-bottom: 0.25rem;
 }
+.headshot {
+  border-radius: 8px;
+  max-width: 500px;
+  max-height: 500px;
+}
 
 .location {
   color: #666;
@@ -65,7 +70,7 @@
 }
 
 .contact-info a {
-  color: royalblue;
+  color: #317309;
   text-decoration: none;
 }
 
