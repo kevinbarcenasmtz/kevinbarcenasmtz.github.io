@@ -2,12 +2,10 @@
 import PortfolioLayout from './components/layout/PortfolioLayout';
 import Section from './components/layout/Section';
 import SectionContent from './components/sections/SectionContent';
-import './index.css';
-import './components/resume/resume.css';
-
-// Import data and hooks
 import { tocItems, sectionConfigs } from './data/section';
 import { usePortfolioNavigation } from './hooks/usePortfolioNavigation';
+import './index.css';
+import './components/resume/resume.css';
 
 export default function App() {
   const { activeIndex, isMobile, sectionRefs } = usePortfolioNavigation();
