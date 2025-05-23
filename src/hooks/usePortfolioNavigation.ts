@@ -1,22 +1,13 @@
 // src/hooks/usePortfolioNavigation.ts
 import { useEffect, useRef, useState } from 'react';
+import { useMediaQuery } from './useMediaQuery';
 
 export function usePortfolioNavigation() {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRefs = useRef<HTMLElement[]>([]);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Mobile detection effect
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkMobile(); // Initial check
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  
+  // Use media query hook instead of manual resize listener
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   // Intersection observer effect for active section tracking
   useEffect(() => {
@@ -36,9 +27,12 @@ export function usePortfolioNavigation() {
       { rootMargin: '0px 0px -80% 0px', threshold: 0.1 }
     );
 
-    sectionRefs.current.forEach((ref) => ref && observer.observe(ref));
+    // Only observe sections that exist
+    const currentRefs = sectionRefs.current.filter(Boolean);
+    currentRefs.forEach((ref) => observer.observe(ref));
+    
     return () => observer.disconnect();
-  }, []);
+  }, []); // Remove dependency array since refs are stable
 
   return {
     activeIndex,
