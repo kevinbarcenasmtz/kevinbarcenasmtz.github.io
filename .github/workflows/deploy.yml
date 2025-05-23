@@ -3,7 +3,7 @@ name: Deploy Portfolio Website
 on:
   push:
     branches:
-      - main  # Set this to your default branch
+      - main 
 
 jobs:
   build-and-deploy:
@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '19'  # Make sure this matches your project's Node version
+          node-version: '19' 
 
       - name: Install dependencies
         run: npm ci

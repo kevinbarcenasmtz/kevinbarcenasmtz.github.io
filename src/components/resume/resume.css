@@ -7,12 +7,19 @@
 
 .profile-section h1 {
   margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.profile-section h3 {
+  font-weight: 600;
 }
 
 .subtitle {
   color: #444;
   margin-bottom: 0.25rem;
+  font-weight: 500;
 }
+
 .headshot {
   border-radius: 8px;
   max-width: 500px;
@@ -27,9 +34,14 @@
   margin-bottom: 2rem;
 }
 
+.education-section h3, .experience-item h3, .project-item h3 {
+  font-weight: 600;
+}
+
 .degree, .company, .project-tech {
   color: #444;
   margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 .details {
@@ -46,6 +58,7 @@
 .period, .project-date {
   color: #666;
   font-style: italic;
+  font-weight: 400;
 }
 
 .experience-description li, .project-description li {
@@ -58,6 +71,7 @@
 
 .skill-category h4 {
   margin-bottom: 0.25rem;
+  font-weight: 600;
 }
 
 .contact-info p {
@@ -65,13 +79,14 @@
 }
 
 .contact-label {
-  font-weight: 500;
+  font-weight: 600;
   margin-right: 0.5rem;
 }
 
 .contact-info a {
   color: #317309;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .contact-info a:hover {
