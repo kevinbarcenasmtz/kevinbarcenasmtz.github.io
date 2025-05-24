@@ -14,7 +14,7 @@ export default function TableOfContents({ items, activeIndex }: Props) {
   const encodedSvg = tocInfo.path
     ? encodeURIComponent(
         `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${tocInfo.width} ${tocInfo.height}">
-          <path d="${tocInfo.path}" stroke="rgba(0,0,0,0.3)" stroke-width="1" fill="none" />
+          <path d="${tocInfo.path}" stroke="rgba(0,0,0,0.3)" stroke-width="4" fill="none" />
         </svg>`
       )
     : '';
@@ -50,7 +50,7 @@ export default function TableOfContents({ items, activeIndex }: Props) {
             href={`#${item.id}`}
             className={`toc-link ${i === activeIndex ? 'active' : ''}`}
             style={{
-              paddingLeft: `${item.depth >= 2 ? item.depth * 16 : 16}px`,
+              paddingLeft: `${item.depth >= 2 ? item.depth * 16 : 12}px`,
             }}
           >
             {item.label}
