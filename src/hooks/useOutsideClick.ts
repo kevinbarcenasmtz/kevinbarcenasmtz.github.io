@@ -2,11 +2,12 @@
 import { useEffect, RefObject } from 'react';
 
 export function useOutsideClick(
-  ref: RefObject<HTMLElement>,
+  ref: RefObject<HTMLElement | null>,
   handler: () => void
 ) {
   useEffect(() => {
     const listener = (event: MouseEvent | TouchEvent) => {
+      // Add null check for ref.current
       if (!ref.current || ref.current.contains(event.target as Node)) {
         return;
       }

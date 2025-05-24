@@ -1,7 +1,7 @@
 // src/components/sections/SectionContent.tsx
 import ProfileSection from '../resume/ProfileSection';
 import EducationSection from '../resume/EducationSection';
-import ExperienceItem from '../resume/ExperienceSection';
+import ExperienceItem from '../resume/ExperienceItem';
 import ProjectItem from '../resume/ProjectItem';
 import SkillsList from '../resume/SkillsList';
 import ContactInfo from '../resume/ContactInfo';

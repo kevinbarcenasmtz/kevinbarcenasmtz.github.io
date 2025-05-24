@@ -1,25 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
+import { useOutsideClick } from '../../hooks/useOutsideClick';
 
 type MobileNavProps = {
   children: React.ReactNode;
-};
-
-const useOutsideClick = (
-  ref: React.RefObject<HTMLElement | null>,
-  handler: () => void
-) => {
-  useEffect(() => {
-    const listener = (event: MouseEvent | TouchEvent) => {
-      if (!ref.current || ref.current.contains(event.target as Node)) return;
-      handler();
-    };
-    document.addEventListener('mousedown', listener);
-    document.addEventListener('touchstart', listener);
-    return () => {
-      document.removeEventListener('mousedown', listener);
-      document.removeEventListener('touchstart', listener);
-    };
-  }, [ref, handler]);
 };
 
 export default function MobileNav({ children }: MobileNavProps) {
@@ -28,6 +11,7 @@ export default function MobileNav({ children }: MobileNavProps) {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => isOpen && setIsOpen(false);
+  
   useOutsideClick(sidebarRef, closeMenu);
 
   return (

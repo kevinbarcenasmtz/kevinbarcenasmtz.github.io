@@ -1,5 +1,5 @@
 /* src/components/resume/resume.css */
-/* Minimal styling for resume components */
+/* Resume component styles with consolidated mobile responsiveness */
 
 .profile-section {
   margin-bottom: 2rem;
@@ -93,10 +93,10 @@
   text-decoration: underline;
 }
 
-/* Add these responsive styles to src/components/resume/resume.css */
+/* MOBILE STYLES - Resume Components */
 @media (max-width: 768px) {
   .profile-section h1 {
-    font-size: 24px;
+    font-size: var(--mobile-h1-size);
   }
   
   .details {
@@ -114,32 +114,26 @@
     line-height: 1.5;
   }
   
-  /* Adjust spacing for mobile */
   .education-section, 
   .experience-item, 
   .project-item {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--mobile-section-margin);
+  }
+  
+  .headshot {
+    max-width: 100%;
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   .profile-section h1 {
-    font-size: 22px;
+    font-size: var(--small-mobile-h1-size);
   }
   
-  /* Further reduce margins on smallest screens */
   .education-section, 
   .experience-item, 
   .project-item {
-    margin-bottom: 1rem;
-  }
-  
-  /* Make buttons more tappable */
-  a[href="/resume.pdf"] {
-    padding: 0.75rem 1.5rem;
-    display: block;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
+    margin-bottom: var(--small-mobile-section-margin);
   }
 }

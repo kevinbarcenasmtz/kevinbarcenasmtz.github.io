@@ -50,31 +50,31 @@
 .toc-static-line {
   position: absolute;
   top: 0;
-  left: 12px; /* Match offset used in getLineOffset for depth 1 */
+  left: 12px;
   width: 1px;
   height: 100%;
   background-color: #317039;
   z-index: 0;
 }
-/* src/components/sidebar/toc.css - add these styles */
+
+/* TOC MOBILE STYLES */
 @media (max-width: 768px) {
   .toc-container {
     width: 100%;
   }
   
   .toc-link {
-    padding: 8px 0; /* Larger tap targets for mobile */
-    font-size: 16px; /* Slightly larger font for readability */
+    padding: 8px 0;
+    font-size: var(--mobile-base-font);
   }
   
-  /* Simplify the visualization on mobile */
   .toc-thumb {
-    opacity: 0.3; /* Make the line indicators subtler */
+    opacity: 0.3;
   }
   
   .thumb-indicator {
-    background-color: #317309; /* Make active indicator more visible */
+    background-color: #317309;
     left: 2px;
-    width: 4px; /* Thicker indicator */
+    width: 4px;
   }
 }
