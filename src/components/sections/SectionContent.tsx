@@ -1,15 +1,16 @@
-// src/components/sections/SectionContent.tsx
+// src/components/sections/SectionContent.tsx - Add the new intro and props
 import ProfileSection from '../resume/ProfileSection';
 import EducationSection from '../resume/EducationSection';
 import ExperienceItem from '../resume/ExperienceItem';
-import ProjectItem from '../resume/ProjectItem';
+import EnhancedProjectItem from '../resume/EnhancedProjectItem';
+import ProjectsIntro from '../resume/ProjectsIntro';
 import SkillsList from '../resume/SkillsList';
 import ContactInfo from '../resume/ContactInfo';
 import {
   skills,
   researchExperience,
-  truckingProject,
-  footballProject,
+  truckingProjectEnhanced,
+  footballProjectEnhanced,
   projectsIntro,
   resumeContent
 } from '../../data/portfolio';
@@ -32,15 +33,15 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
   }
 
   if (sectionId === 'projects') {
-    return <p>{projectsIntro}</p>;
+    return <ProjectsIntro title={projectsIntro.title} description={projectsIntro.description} />;
   }
 
   if (sectionId === 'trucking-logistics') {
-    return <ProjectItem {...truckingProject} />;
+    return <EnhancedProjectItem {...truckingProjectEnhanced} />;
   }
 
   if (sectionId === 'empire-football') {
-    return <ProjectItem {...footballProject} />;
+    return <EnhancedProjectItem {...footballProjectEnhanced} />;
   }
 
   if (sectionId === 'experience') {

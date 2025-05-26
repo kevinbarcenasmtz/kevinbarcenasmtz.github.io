@@ -420,3 +420,215 @@
 .skills-typewriter {
   contain: layout;
 }
+
+/* Enhanced Project Styles */
+.enhanced-project-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #fffbeb;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.enhanced-project-item.featured {
+  border: 2px solid #317039;
+  background: linear-gradient(135deg, #faf5e1 0%, #fffbeb 100%);
+  box-shadow: 0 4px 15px rgba(49, 112, 57, 0.1);
+}
+
+.project-metrics {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.metric-badge {
+  background: rgba(49, 112, 57, 0.1);
+  border: 1px solid rgba(49, 112, 57, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.metric-badge:hover {
+  background: rgba(49, 112, 57, 0.15);
+  transform: translateY(-2px);
+}
+
+.metric-value {
+  display: block;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #317039;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-tech-enhanced {
+  margin: 1rem 0;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.4rem 0.8rem;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+/* Action buttons */
+.project-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f3f4;
+}
+
+.project-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-action-btn.demo {
+  background: linear-gradient(135deg, #317039, #4a9251);
+  color: white;
+}
+
+.project-action-btn.github {
+  background: linear-gradient(135deg, #24292e, #40464e);
+  color: white;
+}
+
+.project-action-btn:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Projects intro styles */
+.projects-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.projects-intro-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.projects-intro-underline {
+  height: 3px;
+  background: linear-gradient(90deg, #317039, #4a9251);
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+  max-width: 150px;
+}
+
+.projects-intro-description {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Mobile stacked layout */
+@media (max-width: 768px) {
+  .enhanced-project-item {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .featured-project-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  .project-metrics {
+    justify-content: space-between;
+  }
+  
+  .metric-badge {
+    flex: 1;
+    min-width: 0;
+    margin: 0 0.25rem;
+  }
+  
+  .tech-tag {
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    font-size: 0.8rem;
+  }
+  
+  /* Stack action buttons vertically on mobile */
+  .project-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .project-action-btn {
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .projects-intro-title {
+    font-size: 1.8rem;
+  }
+  
+  .projects-intro-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .enhanced-project-item {
+    padding: 1rem;
+  }
+  
+  .project-metrics {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .metric-badge {
+    margin: 0;
+  }
+  
+  .projects-intro {
+    padding: 1rem 0;
+  }
+}

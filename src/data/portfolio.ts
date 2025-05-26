@@ -1,5 +1,4 @@
-// src/data/portfolio.ts
-
+// src/data/portfolio.ts - Add links and richer data to the enhanced projects
 export const skills = [
   {
     category: 'Programming Languages',
@@ -34,6 +33,47 @@ export const researchExperience = {
   ]
 };
 
+// Enhanced project data with links and rich metadata
+export const truckingProjectEnhanced = {
+  title: 'Full Stack Developer – Trucking Logistics',
+  date: 'January 2025',
+  technologies: ['Expo React Native', 'TypeScript', 'Firebase', 'Firebase ML Kit', 'OpenAI API'],
+  description: [
+    'Architected and implemented a comprehensive trucking logistics application using Expo, launching to 50+ users.',
+    'Integrated camera-based OCR technology via Google ML Kit to capture and analyze data from truck receipts, enhancing logistics management.',
+    'Developed features for processing mileage and service receipts, extracting critical data such as fuel purchases, material weights, and pricing.',
+    'Built an automated reporting system for generating detailed reports (daily, weekly, monthly, yearly) to aid in tax management and organizational efficiency for trucking companies.'
+  ],
+  metrics: [
+    { label: 'Active Users', value: '50+' },
+    { label: 'OCR Accuracy', value: '95%' },
+    { label: 'Time Saved', value: '70%' }
+  ],
+  demoUrl: '#', // Add your actual demo URL here
+  githubUrl: 'https://github.com/kevinbarcenasmtz/trucklogistics', 
+  featured: true
+};
+
+export const footballProjectEnhanced = {
+  title: 'Empire Football League Soccer Platform',
+  date: 'December 2024',
+  technologies: ['Next.js', 'MongoDB', 'NextAuth', 'PayPal'],
+  description: [
+    'Architected and deployed a comprehensive soccer league management system using Next.js 14 and MongoDB, featuring team profiles, match scheduling, and real-time standings updates, serving over 12 teams and 120+ players.',
+    'Implemented secure role-based authentication using NextAuth.js to manage distinct access levels for league administrators, team managers, and players, with personalized dashboards and content management capabilities.',
+    'Added responsive design principles resulting in a 45% increase in mobile user engagement.'
+  ],
+  metrics: [
+    { label: 'Teams', value: '12+' },
+    { label: 'Players', value: '120+' },
+    { label: 'Mobile Growth', value: '45%' }
+  ],
+  demoUrl: 'https://www.empirefootballleague-atx.com/', 
+  githubUrl: 'https://github.com/kevinbarcenasmtz/EmpireFootballGroup', 
+  featured: true
+};
+
+// Keep the original simple versions for backward compatibility
 export const truckingProject = {
   title: 'Full Stack Developer – Trucking Logistics',
   date: 'January 2025',
@@ -64,7 +104,11 @@ export const aboutMeContent = {
   ]
 };
 
-export const projectsIntro = "These are some of the projects I've worked on that I'm particularly proud of.";
+// Enhanced projects intro with animation
+export const projectsIntro = {
+  title: "Featured Projects",
+  description: "These are some of the projects I've worked on that I'm particularly proud of. Each represents a unique challenge and learning opportunity in my development journey."
+};
 
 export const resumeContent = {
   description: "You can download my full resume as a PDF by clicking the link below:",
