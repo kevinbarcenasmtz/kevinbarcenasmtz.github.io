@@ -1,5 +1,7 @@
-// src/components/resume/EnhancedProjectItem.tsx - Fix flickering
-import { motion } from 'motion/react';
+// src/components/resume/EnhancedProjectItem.tsx
+'use client';
+
+import { motion } from 'framer-motion';
 
 type Metric = {
   label: string;
@@ -17,75 +19,110 @@ type EnhancedProjectItemProps = {
   featured?: boolean;
 };
 
-export default function EnhancedProjectItem({ 
-  title, 
-  date, 
-  technologies, 
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.4, 0, 0.2, 1],
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: [0.4, 0, 0.2, 1],
+    },
+  },
+};
+
+export default function EnhancedProjectItem({
+  title,
+  date,
+  technologies,
   description,
   metrics,
   demoUrl,
   githubUrl,
-  featured = false
+  featured = false,
 }: EnhancedProjectItemProps) {
   return (
-    <motion.div 
+    <motion.div
       className={`enhanced-project-item ${featured ? 'featured' : ''}`}
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}  // Changed from whileInView to animate
-      viewport={{ once: true, amount: 0.4 }}
-      transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-      style={{ opacity: 1, transform: 'translateY(0px)' }}  // Force final state
-    >      
-
-      <div className="project-header">
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <motion.div className="project-header" variants={itemVariants}>
         <h3>{title}</h3>
         <p className="project-date">{date}</p>
-      </div>
+      </motion.div>
 
-      <div className="project-metrics">
+      <motion.div className="project-metrics" variants={itemVariants}>
         {metrics.map((metric) => (
-          <div
+          <motion.div
             key={metric.label}
             className="metric-badge"
+            whileHover={{
+              y: -2,
+              transition: { duration: 0.2 },
+            }}
           >
             <span className="metric-value">{metric.value}</span>
             <span className="metric-label">{metric.label}</span>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="project-tech-enhanced">
+      <motion.div className="project-tech-enhanced" variants={itemVariants}>
         {technologies.map((tech) => (
           <motion.span
             key={tech}
             className="tech-tag"
-            whileHover={{ y: -1 }}
-            transition={{ duration: 0.2 }}
+            whileHover={{
+              y: -1,
+              transition: { duration: 0.2 },
+            }}
           >
             {tech}
           </motion.span>
         ))}
-      </div>
+      </motion.div>
 
-      <ul className="project-description">
+      <motion.ul className="project-description" variants={itemVariants}>
         {description.map((item, index) => (
-          <li key={index}>
+          <motion.li key={index} variants={itemVariants}>
             {item}
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
 
       {(demoUrl || githubUrl) && (
-        <div className="project-actions">
+        <motion.div className="project-actions" variants={itemVariants}>
           {demoUrl && (
             <motion.a
               href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="project-action-btn demo"
-              whileHover={{ scale: 1.02, y: -1 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.2 }}
+              whileHover={{
+                scale: 1.02,
+                y: -1,
+                transition: { duration: 0.2 },
+              }}
+              whileTap={{
+                scale: 0.98,
+                transition: { duration: 0.1 },
+              }}
             >
               View Demo →
             </motion.a>
@@ -96,14 +133,20 @@ export default function EnhancedProjectItem({
               target="_blank"
               rel="noopener noreferrer"
               className="project-action-btn github"
-              whileHover={{ scale: 1.02, y: -1 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.2 }}
+              whileHover={{
+                scale: 1.02,
+                y: -1,
+                transition: { duration: 0.2 },
+              }}
+              whileTap={{
+                scale: 0.98,
+                transition: { duration: 0.1 },
+              }}
             >
               View Code →
             </motion.a>
           )}
-        </div>
+        </motion.div>
       )}
     </motion.div>
   );

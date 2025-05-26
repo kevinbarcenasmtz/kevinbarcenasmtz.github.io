@@ -5,6 +5,7 @@ import ExperienceItem from '../resume/ExperienceItem';
 import EnhancedProjectItem from '../resume/EnhancedProjectItem';
 import ProjectsIntro from '../resume/ProjectsIntro';
 import SkillsList from '../resume/SkillsList';
+import NotesSection from '../resume/NotesSection';
 import ContactInfo from '../resume/ContactInfo';
 import {
   skills,
@@ -47,7 +48,10 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
   if (sectionId === 'experience') {
     return <ExperienceItem {...researchExperience} />;
   }
-
+  
+  if (sectionId === 'notes'){
+    return <NotesSection/>;
+  }
   if (sectionId === 'contact') {
     return <ContactInfo />;
   }
