@@ -1,7 +1,7 @@
 // src/components/resume/EnhancedProjectItem.tsx
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 type Metric = {
   label: string;
