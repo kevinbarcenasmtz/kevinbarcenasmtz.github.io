@@ -5,12 +5,11 @@ import ExperienceItem from '../resume/ExperienceItem';
 import ProjectItem from '../resume/ProjectItem';
 import SkillsList from '../resume/SkillsList';
 import ContactInfo from '../resume/ContactInfo';
-import { 
-  skills, 
-  researchExperience, 
-  truckingProject, 
+import {
+  skills,
+  researchExperience,
+  truckingProject,
   footballProject,
-  aboutMeContent,
   projectsIntro,
   resumeContent
 } from '../../data/portfolio';
@@ -21,14 +20,7 @@ type SectionContentProps = {
 
 export default function SectionContent({ sectionId }: SectionContentProps) {
   if (sectionId === 'about-me') {
-    return (
-      <>
-        <ProfileSection />
-        {aboutMeContent.paragraphs.map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
-      </>
-    );
+    return <ProfileSection />;
   }
 
   if (sectionId === 'education') {
@@ -63,9 +55,9 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
     return (
       <>
         <p>{resumeContent.description}</p>
-        <a 
+        <a
           href={resumeContent.href}
-          target="_blank" 
+          target="_blank"
           rel="noopener noreferrer"
           className="resume-button"
         >

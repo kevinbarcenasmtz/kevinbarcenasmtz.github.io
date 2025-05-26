@@ -7,7 +7,10 @@ const courses = [
   { name: 'Data Structures', category: 'fundamentals' },
   { name: 'Machine Learning', category: 'ml' },
   { name: 'Software Engineering', category: 'software' },
-  { name: 'Database Management', category: 'data' }
+  { name: 'Database Management', category: 'data' },
+  { name: 'Analyzing Textual Data: Linguistic Stats', category: 'data'},
+  { name: 'Matrix Calculations & Linear Algebra', category: 'math'},
+  { name: 'Probability & Statistics', category: 'math'}
 ];
 
 const containerVariants = {

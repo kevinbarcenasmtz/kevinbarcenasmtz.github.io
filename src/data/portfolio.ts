@@ -49,24 +49,10 @@ export const footballProject = {
   ]
 };
 
-// About Me content - moved from component
 export const aboutMeContent = {
   paragraphs: [
-    
-    `As a Mexican-American from Austin, Texas, with both parents who immigrated from Mexico, 
-     I've grown up with the advantage of being bilingual. This bilingualism has profoundly shaped my 
-     outlook on life, my identity, and my personal ideals. It has influenced my journey in higher
-     education after high school. I believe that having the opportunity to learn 
-     is a privilege and more importantly, it's a way I can inspire and influence young teens to continue their 
-     educational journey. The critical question becomes: What do I do with the knowledge I'm acquiring? I feel 
-     the best way to use my skills and contribute to society is to create meaningful, useful solutions for people. 
-     This is precisely why I've focused my studies on computer science, which laid the foundation for me to develop software, 
-     apps, and solutions that can serve communities. My study of linguistics further enhances this foundation by applying 
-     technological solutions to language specific challenges, problems, and tasks that can be uniquely addressed through 
-     the intersection of computer science and linguistics.`,
-    
-    `As I continue to develop technological solutions, I am committed to
-     being mindful of the tools I choose and fully understanding the broader implications of those choices.`
+    `As a Mexican-American from Austin, Texas, whose both parents came from Mexico, I've grown up with the advantage of being bilingual. This bilingualism has profoundly shaped my outlook on life, my identity, and my personal ideals. It has influenced my journey in higher education after high school. I believe that having the opportunity to learn is a privilege and more importantly, it's a way I can inspire and influence young teens to continue their educational journey. The critical question becomes: What do I do with the knowledge I'm acquiring? I feel the best way to use my skills and contribute to society is to create meaningful, useful solutions for people. This is precisely why I've focused my studies on computer science, which laid the foundation for me to develop software, apps, and solutions that can serve communities. My study of linguistics further enhances this foundation by applying technological solutions to language specific challenges, problems, and tasks that can be uniquely addressed through the intersection of computer science and linguistics.`,
+    `As I continue to develop technological solutions, I am committed to being mindful of the tools I choose and fully understanding the broader implications of those choices.`
   ]
 };
 

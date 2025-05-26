@@ -1,39 +1,54 @@
 /* src/components/resume/resume.css */
-/* Resume component styles with consolidated mobile responsiveness */
 
 /* Profile Section */
+
 .profile-section {
   margin-bottom: 2rem;
 }
 
 .profile-content {
   display: flex;
-  align-items: top;
+  align-items: flex-start;
   gap: 2rem;
 }
 
 .profile-text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header {
   text-align: right;
+  margin-bottom: 1.5rem;
 }
 
-.profile-section h1 {
-  margin-bottom: 0.5rem;
-  font-weight: 700;
+.profile-paragraphs {
+  text-align: left;
+  line-height: 1.0;
+  padding-left: 1rem;
+  border-left: 2px solid #317039;
+  margin-top: 1rem;
 }
 
-.profile-section h3 {
-  font-weight: 600;
+.profile-paragraphs p {
+  margin-bottom: 1.5rem;
+  color: #444;
 }
-
 .name {
   margin: 0 0 0.5rem 0;
+  font-weight: 600;
 }
 
 .subtitle {
   color: #444;
   margin-bottom: 0.25rem;
   font-weight: 500;
+}
+
+.location {
+  color: #666;
+  margin: 0;
 }
 
 .headshot {
@@ -44,12 +59,7 @@
   object-fit: cover;
 }
 
-.location {
-  color: #666;
-  margin: 0;
-}
-
-/* Education Section - Enhanced */
+/* Education Section */
 .education-card {
   background: #fffbeb;
   border-radius: 12px;
@@ -116,25 +126,12 @@
   cursor: default;
 }
 
-.course-tag.systems {
-  border-left: 3px solid #dc3545;
-}
-
-.course-tag.fundamentals {
-  border-left: 3px solid #0d6efd;
-}
-
-.course-tag.ml {
-  border-left: 3px solid #198754;
-}
-
-.course-tag.software {
-  border-left: 3px solid #fd7e14;
-}
-
-.course-tag.data {
-  border-left: 3px solid #6f42c1;
-}
+.course-tag.systems { border-left: 3px solid #dc3545; }
+.course-tag.fundamentals { border-left: 3px solid #0d6efd; }
+.course-tag.ml { border-left: 3px solid #198754; }
+.course-tag.software { border-left: 3px solid #fd7e14; }
+.course-tag.data { border-left: 3px solid #6f42c1; }
+.course-tag.math { border-left: 3px solid #5ba6c3; }
 
 
 /* General Resume Components */
@@ -209,17 +206,17 @@
     gap: 1rem;
   }
   
-  .profile-text {
+  .profile-text, .profile-header {
     text-align: center;
+  }
+  
+  .profile-paragraphs {
+    text-align: left;
   }
   
   .headshot {
     width: 150px;
     height: 150px;
-  }
-  
-  .profile-section h1 {
-    font-size: 24px;
   }
 
   .education-card {
@@ -251,14 +248,12 @@
     margin-bottom: 0.25rem;
   }
  
-  .experience-description li,
-  .project-description li {
+  .experience-description li, .project-description li {
     margin-bottom: 0.75rem;
     line-height: 1.5;
   }
  
-  .experience-item,
-  .project-item {
+  .experience-item, .project-item {
     margin-bottom: 1.5rem;
   }
 }
@@ -268,10 +263,6 @@
     align-self: center;
     width: 180px;
     height: 280px;
-  }
-  
-  .profile-section h1 {
-    font-size: 22px;
   }
 
   .education-card {
@@ -286,12 +277,10 @@
     font-size: 1rem;
   }
  
-  .experience-item,
-  .project-item {
+  .experience-item, .project-item {
     margin-bottom: 1rem;
   }
   
-  /* Make buttons more tappable */
   a[href="/resume.pdf"] {
     padding: 0.75rem 1.5rem;
     display: block;

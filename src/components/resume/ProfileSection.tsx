@@ -1,5 +1,6 @@
 // src/components/resume/ProfileSection.tsx
 import headshot from "../../assets/headshot.jpg";
+import { aboutMeContent } from "../../data/portfolio";
 
 export default function ProfileSection() {
   return (
@@ -7,9 +8,16 @@ export default function ProfileSection() {
       <div className="profile-content">
         <img className="headshot" src={headshot} alt="Kevin Barcenas-Martinez's Headshot" />
         <div className="profile-text">
-          <h3 className="name">Kevin Barcenas-Martinez</h3>
-          <p className="subtitle">Computer Science & Linguistics Student @ UT Austin</p>
-          <p className="location">Based in Austin, Texas</p>
+          <div className="profile-header">
+            <h3 className="name">Kevin Barcenas-Martinez</h3>
+            <p className="subtitle">Computer Science & Linguistics Student @ UT Austin</p>
+            <p className="location">Based in Austin, Texas</p>
+          </div>
+          <div className="profile-paragraphs">
+            {aboutMeContent.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
         </div>
       </div>
     </div>

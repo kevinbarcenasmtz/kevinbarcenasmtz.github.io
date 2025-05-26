@@ -11,7 +11,6 @@ type SectionProps = {
 
 export default function Section({ 
   id, 
-  // title, wanted to keep this hidden as i feel having two parts where it says about-me is silly.
   index, 
   children, 
   sectionRefs 
@@ -26,7 +25,6 @@ export default function Section({
       }}
       className="section"
     >
-      {/* <h2>{title}</h2> same here*/} 
       {children}
     </section>
   );
