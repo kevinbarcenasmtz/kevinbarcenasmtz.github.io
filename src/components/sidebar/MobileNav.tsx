@@ -14,21 +14,58 @@ export default function MobileNav({ children }: MobileNavProps) {
   
   useOutsideClick(sidebarRef, closeMenu);
 
+  // Handle clicks on navigation links specifically
+  const handleNavLinkClick = (event: React.MouseEvent) => {
+    // Only close if clicking on an actual navigation link
+    const target = event.target as HTMLElement;
+    if (target.tagName === 'A' || target.closest('a')) {
+      setIsOpen(false);
+    }
+    // Don't close for other clicks in the sidebar
+  };
+
   return (
     <>
-      <button className="menu-toggle" onClick={toggleMenu}>
-        <svg width="24" height="24" viewBox="0 0 24 24">
+      <button 
+        className="menu-toggle" 
+        onClick={toggleMenu}
+        aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+        aria-expanded={isOpen}
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           {isOpen ? (
-            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" />
+            <path 
+              d="M18 6L6 18M6 6L18 18" 
+              stroke="currentColor" 
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
           ) : (
-            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" />
+            <path 
+              d="M4 6H20M4 12H20M4 18H20" 
+              stroke="currentColor" 
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
           )}
         </svg>
       </button>
-      <div ref={sidebarRef} className={`sidebar ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}>
+      
+      <div 
+        ref={sidebarRef} 
+        className={`sidebar ${isOpen ? 'open' : ''}`} 
+        onClick={handleNavLinkClick}
+      >
         {children}
       </div>
-      {isOpen && <div className="mobile-overlay" onClick={closeMenu} aria-hidden="true" />}
+      
+      {isOpen && (
+        <div 
+          className="mobile-overlay" 
+          onClick={closeMenu} 
+          aria-hidden="true" 
+        />
+      )}
     </>
   );
 }
