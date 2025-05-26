@@ -1,17 +1,25 @@
 // src/data/portfolio.ts
 
 export const skills = [
-  { 
-    category: 'Technical Skills', 
-    skills: 'Python, TypeScript, Javascript, Java, C, Objective-C, Swift, HTML/CSS, NLTK, CLTK, Pandas, NumPy' 
+  {
+    category: 'Programming Languages',
+    skills: 'Python, TypeScript, JavaScript, Java, C, Objective-C, Swift, HTML/CSS'
   },
-  { 
-    category: 'Frameworks & Tools', 
-    skills: 'Next.js, React Native, Expo, MongoDB, MySQL, PostgresSQL, Firebase, Supabase, NextAuth, Google Cloud Platform, Docker, AWS, Xcode' 
+  {
+    category: 'Libraries & Frameworks',
+    skills: 'Next.js, React Native, Expo, NLTK, CLTK, Pandas, NumPy, NextAuth'
   },
-  { 
-    category: 'Languages', 
-    skills: 'Spanish (Native), English (Native)' 
+  {
+    category: 'Databases & Cloud',
+    skills: 'MongoDB, MySQL, PostgreSQL, Firebase, Supabase, Google Cloud Platform, AWS'
+  },
+  {
+    category: 'Development Tools',
+    skills: 'Docker, Xcode, Git, VS Code'
+  },
+  {
+    category: 'Natural Languages',
+    skills: 'Spanish (Native), English (Native)'
   }
 ];
 

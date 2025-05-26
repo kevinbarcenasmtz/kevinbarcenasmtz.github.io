@@ -289,3 +289,134 @@
     box-sizing: border-box;
   }
 }
+
+/* Character-by-Character Typewriter Animation */
+.skills-typewriter {
+  margin-bottom: 1rem;
+}
+
+.skill-category-typewriter {
+  margin-bottom: 1rem;
+}
+
+.skill-category-typewriter h4 {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.typewriter-container-char {
+  position: relative;
+  background: #fffbeb;
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid #317039;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.typewriter-text-char {
+  white-space: nowrap;
+  min-height: 1.5em;
+  display: inline-block;
+  position: relative;
+}
+
+.typewriter-text-char.started:not(.completed)::after {
+  content: '|';
+  color: #317039;
+  font-weight: bold;
+  animation: blink 1.2s infinite;
+  margin-left: 2px;
+}
+
+.typewriter-content {
+  color: #444;
+  font-weight: 500;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 50% { 
+    opacity: 1; 
+  }
+  51%, 100% { 
+    opacity: 0; 
+  }
+}
+
+/* Horizontal scroll styling */
+.typewriter-container-char::-webkit-scrollbar {
+  height: 4px;
+}
+
+.typewriter-container-char::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.typewriter-container-char::-webkit-scrollbar-thumb {
+  background: #317039;
+  border-radius: 4px;
+}
+
+.typewriter-container-char::-webkit-scrollbar-thumb:hover {
+  background: #2a5d31;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .typewriter-container-char {
+    padding: 0.75rem;
+    overflow-x: auto;
+  }
+  
+  .skill-category-typewriter h4 {
+    font-size: 1rem;
+  }
+  
+  .typewriter-content {
+    font-size: 0.9rem;
+  }
+
+  /* Add scroll hint for mobile */
+  .typewriter-container-char::after {
+    content: '→';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    opacity: 0.7;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter-container-char {
+    padding: 0.5rem;
+  }
+  
+  .typewriter-content {
+    font-size: 0.85rem;
+  }
+}
+
+/* Performance optimizations */
+.typewriter-text-char {
+  will-change: transform;
+  contain: layout style;
+}
+
+.skills-typewriter {
+  contain: layout;
+}
