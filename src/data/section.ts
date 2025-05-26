@@ -9,6 +9,7 @@ export const tocItems: TocItem[] = [
   { id: 'trucking-logistics', label: 'Trucking Logistics', depth: 2 },
   { id: 'empire-football', label: 'Empire Football League', depth: 2 },
   { id: 'experience', label: 'Experience', depth: 1 },
+  { id: 'notes', label: 'Notes', depth: 1},
   { id: 'contact', label: 'Contact Information', depth: 1 },
   { id: 'resume', label: 'Resume', depth: 1 },
 ];
@@ -27,6 +28,7 @@ export const sectionConfigs: SectionConfig[] = [
   { id: 'trucking-logistics', title: 'Trucking Logistics', order: 4 },
   { id: 'empire-football', title: 'Empire Football League Platform', order: 5 },
   { id: 'experience', title: 'Experience', order: 6 },
-  { id: 'contact', title: 'Contact Information', order: 7 },
-  { id: 'resume', title: 'Resume', order: 8 },
+  { id: 'notes', title: 'Notes', order: 7},
+  { id: 'contact', title: 'Contact Information', order: 8 },
+  { id: 'resume', title: 'Resume', order: 9 },
 ];

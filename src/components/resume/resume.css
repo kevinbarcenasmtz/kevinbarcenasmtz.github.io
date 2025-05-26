@@ -1,6 +1,7 @@
 /* src/components/resume/resume.css */
 /* Resume component styles with consolidated mobile responsiveness */
 
+/* Profile Section */
 .profile-section {
   margin-bottom: 2rem;
 }
@@ -14,8 +15,6 @@
 .profile-text {
   flex: 1;
   text-align: right;
-
-  
 }
 
 .profile-section h1 {
@@ -50,11 +49,100 @@
   margin: 0;
 }
 
-.education-section, .experience-item, .project-item {
+/* Education Section - Enhanced */
+.education-card {
+  background: #fffbeb;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.education-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.education-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.graduation {
+  color: #666;
+  font-weight: 500;
+}
+
+.gpa {
+  background: linear-gradient(135deg, #317039, #4a9251);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: default;
+}
+
+.coursework-section h4 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.course-tag {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+  cursor: default;
+}
+
+.course-tag.systems {
+  border-left: 3px solid #dc3545;
+}
+
+.course-tag.fundamentals {
+  border-left: 3px solid #0d6efd;
+}
+
+.course-tag.ml {
+  border-left: 3px solid #198754;
+}
+
+.course-tag.software {
+  border-left: 3px solid #fd7e14;
+}
+
+.course-tag.data {
+  border-left: 3px solid #6f42c1;
+}
+
+
+/* General Resume Components */
+.experience-item, .project-item {
   margin-bottom: 2rem;
 }
 
-.education-section h3, .experience-item h3, .project-item h3 {
+.experience-item h3, .project-item h3 {
   font-weight: 600;
 }
 
@@ -113,7 +201,7 @@
   text-decoration: underline;
 }
 
-/* MOBILE STYLES - Resume Components */
+/* Mobile Styles */
 @media (max-width: 768px) {
   .profile-content {
     flex-direction: column;
@@ -133,6 +221,26 @@
   .profile-section h1 {
     font-size: 24px;
   }
+
+  .education-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .education-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .course-tags {
+    gap: 0.4rem;
+  }
+  
+  .course-tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
  
   .details {
     flex-direction: column;
@@ -149,7 +257,6 @@
     line-height: 1.5;
   }
  
-  .education-section,
   .experience-item,
   .project-item {
     margin-bottom: 1.5rem;
@@ -161,14 +268,24 @@
     align-self: center;
     width: 180px;
     height: 280px;
-    
   }
   
   .profile-section h1 {
     font-size: 22px;
   }
+
+  .education-card {
+    padding: 1rem;
+  }
+  
+  .education-title {
+    font-size: 1.3rem;
+  }
+  
+  .degree {
+    font-size: 1rem;
+  }
  
-  .education-section,
   .experience-item,
   .project-item {
     margin-bottom: 1rem;
