@@ -1,143 +1,106 @@
+/* Global Styles & Core Layout */
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: #fffbeb;
   overflow-x: hidden;
 }
-
+/* Core App Layout */
 .container {
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
+display: flex;
+height: 100vh;
+overflow: hidden;
 }
-
 .sidebar {
-  width: 150px;
-  padding: 20px;
-  overflow-y: auto;
-  border-right: 1px solid #eee;
-  transition: transform 0.3s ease;
+width: 150px;
+padding: 20px;
+overflow-y: auto;
+border-right: 1px solid #eee;
+transition: transform 0.3s ease;
 }
-
 .main {
-  flex: 1;
-  overflow-y: auto;
-  padding: 40px;
-  scroll-behavior: smooth;
+flex: 1;
+overflow-y: auto;
+padding: 40px;
+scroll-behavior: smooth;
 }
-
+/* Section Layout */
 .section {
-  min-height: min-content;
-  padding-top: 10px;
+min-height: min-content;
+padding-top: 10px;
 }
-
 .section h2 {
-  font-size: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
+font-size: 24px;
+margin-bottom: 16px;
+font-weight: 600;
+color: var(--resume-text-primary, #1a1a1a);
 }
-
-/* Mobile menu toggle button */
+/* Mobile Navigation */
 .menu-toggle {
-  display: none;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 100;
-  background: #317039;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+display: none;
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 100;
+background: #317039;
+color: white;
+border: none;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+cursor: pointer;
+box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-
 .mobile-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 90;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 90;
 }
-
-.resume-button {
-  display: inline-block;
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
-  background: royalblue;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  font-weight: 500;
-}
-
-.resume-button:hover {
-  background-color: #2a4db0;
-}
-
-/* MOBILE STYLES - Layout Level */
+/* Mobile Layout */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100vh;
-    background: #fffbeb;
-    z-index: 99;
-    transform: translateX(-100%);
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  }
-  
-  .sidebar.open {
-    transform: translateX(0);
-  }
-  
-  .main {
-    padding: var(--mobile-padding);
-    margin-top: 60px; /* Space for fixed menu button */
-  }
-  
-  .menu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .section {
-    min-height: auto;
-    padding-top: 40px;
-  }
-  
-  .section h2 {
-    font-size: var(--mobile-h2-size);
-  }
-  
-  .resume-button {
-    padding: 0.75rem 1rem;
-    display: block;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-  }
+.container {
+flex-direction: column;
 }
-
-/* Small mobile screens */
+.sidebar {
+position: fixed;
+top: 0;
+left: 0;
+width: 80%;
+height: 100vh;
+background: #fffbeb;
+z-index: 99;
+transform: translateX(-100%);
+box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.sidebar.open {
+transform: translateX(0);
+}
+.main {
+padding: var(--mobile-padding);
+margin-top: 60px; /* Space for fixed menu button */
+}
+.menu-toggle {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.section {
+min-height: auto;
+padding-top: 40px;
+}
+.section h2 {
+font-size: var(--mobile-h2-size);
+}
+}
 @media (max-width: 480px) {
-  .main {
-    padding: var(--small-mobile-padding);
-  }
-  
-  .section h2 {
-    font-size: 18px;
-  }
+.main {
+padding: var(--small-mobile-padding);
+}
+.section h2 {
+font-size: 18px;
+}
 }

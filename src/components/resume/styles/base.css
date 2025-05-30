@@ -1,0 +1,81 @@
+/* Base resume styles and CSS custom properties */
+:root {
+  --resume-primary-color: #317039;
+  --resume-secondary-color: #4a9251;
+  --resume-text-primary: #1a1a1a;
+  --resume-text-secondary: #444;
+  --resume-text-muted: #666;
+  --resume-background: #fffbeb;
+  --resume-card-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  --resume-border: 1px solid rgba(0,0,0,0.06);
+  --resume-border-radius: 12px;
+  --resume-spacing-sm: 0.5rem;
+  --resume-spacing-md: 1rem;
+  --resume-spacing-lg: 1.5rem;
+  --resume-spacing-xl: 2rem;
+}
+/* General Resume Components */
+.experience-item, .project-item {
+margin-bottom: var(--resume-spacing-xl);
+}
+
+.experience-item h3, .project-item h3 {
+font-weight: 600;
+color: var(--resume-text-primary);
+}
+
+.degree, .company, .project-tech {
+color: var(--resume-text-secondary);
+margin-bottom: var(--resume-spacing-sm);
+font-weight: 500;
+}
+
+.details {
+display: flex;
+justify-content: space-between;
+color: var(--resume-text-muted);
+margin-bottom: var(--resume-spacing-sm);
+}
+
+.experience-header, .project-header {
+margin-bottom: var(--resume-spacing-md);
+}
+
+.period, .project-date {
+color: var(--resume-text-muted);
+font-style: italic;
+font-weight: 400;
+}
+
+.experience-description li, .project-description li {
+margin-bottom: var(--resume-spacing-sm);
+line-height: 1.6;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+.details {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.details span {
+margin-bottom: 0.25rem;
+}
+
+.experience-description li, .project-description li {
+margin-bottom: 0.75rem;
+line-height: 1.5;
+}
+
+.experience-item, .project-item {
+margin-bottom: var(--resume-spacing-lg);
+}
+
+}
+@media (max-width: 480px) {
+.experience-item, .project-item {
+margin-bottom: var(--resume-spacing-md);
+}
+
+}

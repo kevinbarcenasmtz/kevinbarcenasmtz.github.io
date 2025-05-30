@@ -1,0 +1,95 @@
+/* Education Section Styles */
+.education-card {
+  background: var(--resume-background);
+  border-radius: var(--resume-border-radius);
+  padding: var(--resume-spacing-xl);
+  margin-bottom: var(--resume-spacing-xl);
+  box-shadow: var(--resume-card-shadow);
+  border: var(--resume-border);
+  transition: box-shadow 0.3s ease;
+}
+.education-title {
+font-size: 1.5rem;
+font-weight: 600;
+color: var(--resume-text-primary);
+margin-bottom: 0.75rem;
+}
+.education-details {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: var(--resume-spacing-lg);
+padding: 0.75rem 0;
+border-top: 1px solid rgba(0,0,0,0.08);
+border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.graduation {
+color: var(--resume-text-muted);
+font-weight: 500;
+}
+.gpa {
+background: linear-gradient(135deg, var(--resume-primary-color), var(--resume-secondary-color));
+color: white;
+padding: 0.4rem 0.8rem;
+border-radius: 20px;
+font-weight: 600;
+font-size: 0.9rem;
+cursor: default;
+}
+.coursework-section h4 {
+font-weight: 600;
+color: #333;
+margin-bottom: var(--resume-spacing-md);
+font-size: 1rem;
+}
+.course-tags {
+display: flex;
+flex-wrap: wrap;
+gap: var(--resume-spacing-sm);
+}
+.course-tag {
+background: #f8f9fa;
+color: #495057;
+padding: var(--resume-spacing-sm) var(--resume-spacing-md);
+border-radius: 6px;
+font-size: 0.9rem;
+font-weight: 500;
+border: 1px solid #e9ecef;
+cursor: default;
+}
+.course-tag.systems { border-left: 3px solid #dc3545; }
+.course-tag.fundamentals { border-left: 3px solid #0d6efd; }
+.course-tag.ml { border-left: 3px solid #198754; }
+.course-tag.software { border-left: 3px solid #fd7e14; }
+.course-tag.data { border-left: 3px solid #6f42c1; }
+.course-tag.math { border-left: 3px solid #5ba6c3; }
+/* Mobile Styles */
+@media (max-width: 768px) {
+.education-card {
+padding: var(--resume-spacing-lg);
+margin-bottom: var(--resume-spacing-lg);
+}
+.education-details {
+flex-direction: column;
+align-items: flex-start;
+gap: var(--resume-spacing-sm);
+}
+.course-tags {
+gap: 0.4rem;
+}
+.course-tag {
+font-size: 0.85rem;
+padding: 0.4rem 0.8rem;
+}
+}
+@media (max-width: 480px) {
+.education-card {
+padding: var(--resume-spacing-md);
+}
+.education-title {
+font-size: 1.3rem;
+}
+.degree {
+font-size: 1rem;
+}
+}

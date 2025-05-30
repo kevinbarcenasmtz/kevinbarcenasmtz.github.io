@@ -1,0 +1,26 @@
+
+/* Contact Info Styles */
+.contact-info {
+  max-width: 400px;
+}
+.contact-info p {
+margin-bottom: var(--resume-spacing-sm);
+color: var(--resume-text-secondary);
+}
+.contact-info a {
+color: var(--resume-primary-color);
+text-decoration: none;
+font-weight: 500;
+transition: color 0.2s ease;
+}
+.contact-info a:hover {
+text-decoration: underline;
+color: var(--resume-secondary-color);
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+.contact-info {
+max-width: 100%;
+text-align: center;
+}
+}
