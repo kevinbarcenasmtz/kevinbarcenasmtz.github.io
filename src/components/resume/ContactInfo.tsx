@@ -1,31 +1,29 @@
 // src/components/resume/ContactInfo.tsx
 export default function ContactInfo() {
   return (
-    <div className="space-y-1 text-sm text-gray-800">
+    <div className="contact-info">
       <p>
         Github:{" "}
         <a
-          href="https://github.com/kevinbarcenas"
+          href="https://github.com/kevinbarcenasmtz"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-red-600 hover:underline"
         >
-          kevinbarcenas
+          kevinbarcenasmtz
         </a>
       </p>
       <p>
         LinkedIn:{" "}
         <a
-          href="https://linkedin.com/in/kevin-barcenas"
+          href="https://www.linkedin.com/in/kevinbarcenas-mtz/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-red-600 hover:underline"
         >
-          kevin-barcenas
+          kevinbarcenas-mtz
         </a>
       </p>
-      <p>Email: kevin (dot) barcenas @ utexas (dot) edu</p>
-      <p>Discord: kevin#1234</p>
+      <p>Email: kevin14767 @ utexas (dot) edu</p>
+      <p>Discord: kevin14767</p>
     </div>
   );
 }
