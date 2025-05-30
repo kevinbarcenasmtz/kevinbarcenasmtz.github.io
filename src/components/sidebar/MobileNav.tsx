@@ -1,3 +1,4 @@
+// src/components/sidebar/MobileNav.tsx
 import React, { useState, useRef } from 'react';
 import { useOutsideClick } from '../../hooks/useOutsideClick';
 
@@ -19,7 +20,8 @@ export default function MobileNav({ children }: MobileNavProps) {
     // Only close if clicking on an actual navigation link
     const target = event.target as HTMLElement;
     if (target.tagName === 'A' || target.closest('a')) {
-      setIsOpen(false);
+      // Close menu after a short delay to allow navigation to complete
+      setTimeout(() => setIsOpen(false), 100);
     }
     // Don't close for other clicks in the sidebar
   };

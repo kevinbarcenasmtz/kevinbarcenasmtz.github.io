@@ -1,5 +1,7 @@
+// src/components/sidebar/TableOfContents.tsx
 import { useRef } from 'react';
 import { useToc, type TocItem } from '../../hooks/useToc';
+import { URLManager } from '../../utils/urlManager';
 import './toc.css';
 
 type Props = {
@@ -10,6 +12,11 @@ type Props = {
 export default function TableOfContents({ items, activeIndex }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const tocInfo = useToc(items, activeIndex, containerRef);
+
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    event.preventDefault();
+    URLManager.navigateToSection(sectionId);
+  };
 
   const encodedSvg = tocInfo.path
     ? encodeURIComponent(
@@ -47,7 +54,8 @@ export default function TableOfContents({ items, activeIndex }: Props) {
         {items.map((item, i) => (
           <a
             key={item.label}
-            href={`#${item.id}`}
+            href={URLManager.generateTocUrl(item.id)}
+            onClick={(e) => handleLinkClick(e, item.id)}
             className={`toc-link ${i === activeIndex ? 'active' : ''}`}
             style={{
               paddingLeft: `${item.depth >= 2 ? item.depth * 16 : 12}px`,
