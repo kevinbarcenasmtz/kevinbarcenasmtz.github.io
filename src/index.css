@@ -26,8 +26,11 @@ scroll-behavior: smooth;
 }
 /* Section Layout */
 .section {
-min-height: min-content;
-padding-top: 10px;
+  min-height: min-content;
+  padding-top: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: var(--resume-spacing-xl, 2rem);
+  padding-bottom: var(--resume-spacing-xl, 2rem);
 }
 .section h2 {
 font-size: 24px;
@@ -35,6 +38,12 @@ margin-bottom: 16px;
 font-weight: 600;
 color: var(--resume-text-primary, #1a1a1a);
 }
+
+.section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 /* Mobile Navigation */
 .menu-toggle {
 display: none;
@@ -88,10 +97,10 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-.section {
-min-height: auto;
-padding-top: 40px;
-}
+  .section {
+    margin-bottom: var(--resume-spacing-lg, 1.5rem);
+    padding-bottom: var(--resume-spacing-lg, 1.5rem);
+  }
 .section h2 {
 font-size: var(--mobile-h2-size);
 }
