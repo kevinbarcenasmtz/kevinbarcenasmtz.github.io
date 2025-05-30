@@ -109,7 +109,7 @@ export const personalContent = {
 // Enhanced projects intro with animation
 export const projectsIntro = {
   title: "Featured Projects",
-  description: "These are some of the projects I've worked on that I'm particularly proud of. Each represents a unique challenge and learning opportunity in my development journey."
+  description: "These are some of the projects I've worked on that I'm particularly interested in. Each represents a learning opportunity in my development journey."
 };
 
 export const resumeContent = {
