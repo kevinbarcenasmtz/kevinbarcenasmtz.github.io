@@ -4,11 +4,9 @@ import EducationSection from '../resume/EducationSection';
 import ExperienceItem from '../resume/ExperienceItem';
 import EnhancedProjectItem from '../resume/EnhancedProjectItem';
 import ProjectsIntro from '../resume/ProjectsIntro';
-import SkillsList from '../resume/SkillsList';
 import NotesSection from '../resume/NotesSection';
 import ContactInfo from '../resume/ContactInfo';
 import {
-  skills,
   researchExperience,
   truckingProjectEnhanced,
   footballProjectEnhanced,
@@ -29,9 +27,6 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
     return <EducationSection />;
   }
 
-  if (sectionId === 'skills') {
-    return <SkillsList skills={skills} />;
-  }
 
   if (sectionId === 'projects') {
     return <ProjectsIntro title={projectsIntro.title} description={projectsIntro.description} />;
