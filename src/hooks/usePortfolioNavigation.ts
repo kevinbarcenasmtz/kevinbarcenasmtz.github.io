@@ -47,7 +47,7 @@ export function usePortfolioNavigation() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  // Intersection observer effect for active section tracking
+  //
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -62,21 +62,25 @@ export function usePortfolioNavigation() {
             (el) => el?.id === visible[0].target.id
           );
           if (index !== -1) {
-            setActiveIndex(index);
-            // Update URL to match the section that came into view
-            URLManager.updateURL(visible[0].target.id);
+            // Add a small delay to ensure navigation is complete
+            setTimeout(() => {
+              setActiveIndex(index);
+              URLManager.updateURL(visible[0].target.id);
+            }, 50);
           }
         }
       },
-      { rootMargin: '0px 0px -80% 0px', threshold: 0.1 }
+      { 
+        rootMargin: '0px 0px -70% 0px', // Adjusted for better mobile detection
+        threshold: 0.1 
+      }
     );
 
-    // Only observe sections that exist
     const currentRefs = sectionRefs.current.filter(Boolean);
-    currentRefs.forEach((ref) => observer.observe(ref));
-    
-    return () => observer.disconnect();
-  }, []); // Remove dependency array since refs are stable
+  currentRefs.forEach((ref) => observer.observe(ref));
+  
+  return () => observer.disconnect();
+}, []);
 
   return {
     activeIndex,

@@ -20,10 +20,9 @@ export default function MobileNav({ children }: MobileNavProps) {
     // Only close if clicking on an actual navigation link
     const target = event.target as HTMLElement;
     if (target.tagName === 'A' || target.closest('a')) {
-      // Close menu after a short delay to allow navigation to complete
-      setTimeout(() => setIsOpen(false), 100);
+      // Close menu immediately to avoid interference with scroll detection
+      setIsOpen(false);
     }
-    // Don't close for other clicks in the sidebar
   };
 
   return (
