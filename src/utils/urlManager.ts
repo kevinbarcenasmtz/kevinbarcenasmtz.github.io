@@ -19,7 +19,7 @@ const pathToSectionMap: Record<string, string> = Object.fromEntries(
 );
 
 export class URLManager {
-  private static baseUrl = '/portfolio'; // GitHub Pages base path
+  private static baseUrl = ''; // GitHub Pages base path
   
   /**
    * Convert section ID to clean URL path
