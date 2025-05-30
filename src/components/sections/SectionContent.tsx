@@ -1,4 +1,4 @@
-// src/components/sections/SectionContent.tsx - Add the new intro and props
+// src/components/sections/SectionContent.tsx - Add the new import and conditional
 import ProfileSection from '../resume/ProfileSection';
 import EducationSection from '../resume/EducationSection';
 import ExperienceItem from '../resume/ExperienceItem';
@@ -6,6 +6,7 @@ import EnhancedProjectItem from '../resume/EnhancedProjectItem';
 import ProjectsIntro from '../resume/ProjectsIntro';
 import NotesSection from '../resume/NotesSection';
 import ContactInfo from '../resume/ContactInfo';
+import PersonalSection from '../resume/PersonalSection'; // Add this import
 import {
   researchExperience,
   truckingProjectEnhanced,
@@ -27,6 +28,9 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
     return <EducationSection />;
   }
 
+  if (sectionId === 'personal') { // Add this conditional
+    return <PersonalSection />;
+  }
 
   if (sectionId === 'projects') {
     return <ProjectsIntro title={projectsIntro.title} description={projectsIntro.description} />;
@@ -47,6 +51,7 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
   if (sectionId === 'notes'){
     return <NotesSection/>;
   }
+  
   if (sectionId === 'contact') {
     return <ContactInfo />;
   }

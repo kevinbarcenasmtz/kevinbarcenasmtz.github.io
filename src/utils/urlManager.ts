@@ -3,6 +3,7 @@
 // Mapping between section IDs and clean URL paths
 const sectionToPathMap: Record<string, string> = {
   'about-me': '/about-me',
+  'personal': '/personal',
   'education': '/education', 
   'skills': '/skills',
   'projects': '/projects',

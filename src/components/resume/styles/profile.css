@@ -18,7 +18,7 @@ margin-bottom: var(--resume-spacing-lg);
 }
 .profile-paragraphs {
 text-align: left;
-line-height: 1.6;
+line-height: 1.1;
 padding-left: var(--resume-spacing-md);
 border-left: 2px solid var(--resume-primary-color);
 margin-top: var(--resume-spacing-md);

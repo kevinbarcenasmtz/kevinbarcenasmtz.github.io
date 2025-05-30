@@ -1,0 +1,28 @@
+/* Personal Section Styles */
+.personal-section {
+  max-width: 800px;
+}
+
+.personal-content {
+  line-height: 1.6;
+}
+
+.personal-content p {
+  margin-bottom: var(--resume-spacing-lg);
+  color: var(--resume-text-secondary);
+}
+
+.personal-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .personal-section {
+    max-width: 100%;
+  }
+  
+  .personal-content p {
+    margin-bottom: var(--resume-spacing-md);
+  }
+}
