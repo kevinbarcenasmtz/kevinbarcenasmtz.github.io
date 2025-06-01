@@ -6,6 +6,7 @@
 @import './styles/contact.css';
 @import './styles/personal.css';
 @import './styles/notes.css';
+@import './styles/projectitem.css';
 
 /* Resume Button - Global Style */
 .resume-button {

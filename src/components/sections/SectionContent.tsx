@@ -2,15 +2,16 @@
 import ProfileSection from '../resume/ProfileSection';
 import EducationSection from '../resume/EducationSection';
 import ExperienceItem from '../resume/ExperienceItem';
-import EnhancedProjectItem from '../resume/EnhancedProjectItem';
+import ProjectItem from '../resume/ProjectItem';
 import ProjectsIntro from '../resume/ProjectsIntro';
 import NotesSection from '../resume/NotesSection';
 import ContactInfo from '../resume/ContactInfo';
-import PersonalSection from '../resume/PersonalSection'; // Add this import
+import PersonalSection from '../resume/PersonalSection';
 import {
   researchExperience,
-  truckingProjectEnhanced,
-  footballProjectEnhanced,
+  truckingLogistics,
+  empireFootballGroup,
+  unidadAustinContent,
   projectsIntro,
   resumeContent
 } from '../../data/portfolio';
@@ -37,11 +38,15 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
   }
 
   if (sectionId === 'trucking-logistics') {
-    return <EnhancedProjectItem {...truckingProjectEnhanced} />;
+    return <ProjectItem {...truckingLogistics} />;
   }
 
   if (sectionId === 'empire-football') {
-    return <EnhancedProjectItem {...footballProjectEnhanced} />;
+    return <ProjectItem {...empireFootballGroup} />;
+  }
+
+  if (sectionId === 'unidad-austin') {
+    return <ProjectItem {...unidadAustinContent} />;
   }
 
   if (sectionId === 'experience') {

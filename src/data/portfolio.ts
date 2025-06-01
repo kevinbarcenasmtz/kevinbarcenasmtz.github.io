@@ -11,76 +11,55 @@ export const researchExperience = {
   ]
 };
 
-// Enhanced project data with links and rich metadata
-export const truckingProjectEnhanced = {
-  title: 'Full Stack Developer – Trucking Logistics',
+export const truckingLogistics = {
+  title: 'Trucking Logistics Mobile App',
   date: 'January 2025',
-  technologies: ['Expo React Native', 'TypeScript', 'Firebase', 'Firebase ML Kit', 'OpenAI API'],
+  technologies: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Tesseract.js', 'Anthropic API', 'Heroku', 'Firebase'],
   description: [
-    'Architected and implemented a comprehensive trucking logistics application using Expo, launching to 50+ users.',
-    'Integrated camera-based OCR technology via Google ML Kit to capture and analyze data from truck receipts, enhancing logistics management.',
-    'Developed features for processing mileage and service receipts, extracting critical data such as fuel purchases, material weights, and pricing.',
-    'Built an automated reporting system for generating detailed reports (daily, weekly, monthly, yearly) to aid in tax management and organizational efficiency for trucking companies.'
+    "Built a mobile app that helps trucking companies manage their paperwork digitally instead of drowning in receipts.",
+    "The OCR workflow is pretty neat. The mobile app captures images, sends them as base64 to my Node.js backend on Heroku, which uses Tesseract.js to extract the text.",
+    "Then the extracted text gets sent to Anthropic's API to classify and structure the receipt data (fuel purchases, mileage, expenses, etc.) before returning it to the frontend.",
+    "Added smart reporting that generates tax documents and financial summaries, which apparently saves truckers hours of manual work every week.",
+    "Set up CI/CD with GitHub Actions and EAS Build for automated testing and production builds.",
+    "Started as a solution for one trucking company but now has 50+ active users across different operations."
   ],
-  metrics: [
-    { label: 'Active Users', value: '50+' },
-    { label: 'OCR Accuracy', value: '95%' },
-    { label: 'Time Saved', value: '70%' }
-  ],
-  demoUrl: '#', // Add your actual demo URL here
-  githubUrl: 'https://github.com/kevinbarcenasmtz/trucklogistics', 
-  featured: true
+  demoUrl: '#',
+  githubUrl: 'https://github.com/kevinbarcenasmtz/trucklogistics',
 };
 
-export const footballProjectEnhanced = {
-  title: 'Empire Football League Soccer Platform',
+export const empireFootballGroup = {
+  title: 'Empire Football League Platform',
   date: 'December 2024',
-  technologies: ['Next.js', 'MongoDB', 'NextAuth', 'PayPal'],
+  technologies: ["Next.js", "TypeScript", "Cloudflare", "MongoDB", "PayPal"],
   description: [
-    'Architected and deployed a comprehensive soccer league management system using Next.js 14 and MongoDB, featuring team profiles, match scheduling, and real-time standings updates, serving over 12 teams and 120+ players.',
-    'Implemented secure role-based authentication using NextAuth.js to manage distinct access levels for league administrators, team managers, and players, with personalized dashboards and content management capabilities.',
-    'Added responsive design principles resulting in a 45% increase in mobile user engagement.'
+    "Created a full league management system for a local Austin soccer league that was still using spreadsheets and group chats to organize everything.",
+    "Built role-based dashboards so league admins, team managers, and players each get exactly what they need without the clutter.",
+    "The responsive design actually worked. Mobile usage jumped 45% because players could finally check standings and schedules easily on their phones.",
+    "Now manages 12+ teams and 120+ players, turning weekend soccer chaos into something actually organized."
   ],
-  metrics: [
-    { label: 'Teams', value: '12+' },
-    { label: 'Players', value: '120+' },
-    { label: 'Mobile Growth', value: '45%' }
-  ],
-  demoUrl: 'https://www.empirefootballleague-atx.com/', 
-  githubUrl: 'https://github.com/kevinbarcenasmtz/EmpireFootballGroup', 
-  featured: true
+  demoUrl: 'https://www.empirefootballleague-atx.com/',
+  githubUrl: 'https://github.com/kevinbarcenasmtz/EmpireFootballGroup',
 };
 
-// Keep the original simple versions for backward compatibility
-export const truckingProject = {
-  title: 'Full Stack Developer – Trucking Logistics',
-  date: 'January 2025',
-  technologies: 'Expo React Native, Typescript, Firebase, Firebase ML Kit, OpenAI API',
-  description: [
-    'Architected and implemented a comprehensive trucking logistics application using Expo, launching to 50+ users.',
-    'Integrated camera-based OCR technology via Google ML Kit to capture and analyze data from truck receipts, enhancing logistics management.',
-    'Developed features for processing mileage and service receipts, extracting critical data such as fuel purchases, material weights, and pricing.',
-    'Built an automated reporting system for generating detailed reports (daily, weekly, monthly, yearly) to aid in tax management and organizational efficiency for trucking companies.'
-  ]
-};
-
-export const footballProject = {
-  title: 'Empire Football League Soccer Platform',
-  date: 'December 2024',
-  technologies: 'Next.js, MongoDB, NextAuth, PayPal',
-  description: [
-    'Architected and deployed a comprehensive soccer league management system using Next.js 14 and MongoDB, featuring team profiles, match scheduling, and real-time standings updates, serving over 12 teams and 120+ players.',
-    'Implemented secure role-based authentication using NextAuth.js to manage distinct access levels for league administrators, team managers, and players, with personalized dashboards and content management capabilities.',
-    'Added responsive design principles resulting in a 45% increase in mobile user engagement.'
-  ]
-};
+export const unidadAustinContent = {
+  title: "UNIDAD Central Texas",
+  date: "Spring 2025",
+  technologies: ["AWS Amplify", "React + Vite", "Tailwind", "PostgreSQL (AWS RDS)", "AWS EC2 Backend, with Docker containers" ,"Flask with SQLAlchemy ORM"],
+  description : [
+    "UNIDAD Central Texas, stands for Unidos, Navegando, Informacion y Derechos, Ayuda y Defensas",
+    "The purpose of this full stack application is to connect underserved communities with essential local resources, legal education, and civic engagement opportunities.",
+    "This project came intro fruition initially from a Software Engineering class @ UT Austin but over time I've continued to develop it to actually have use to Texas migrant communities."
+  ],
+  demoUrl: "",
+  githubUrl: "https://gitlab.com/kevin14767/cs373-spring-2025-group-04/",
+}
 
 export const aboutMeContent = {
   paragraphs: [
     // New professional/academic summary paragraphs
     `Hi! my name's Kevin. I'm a Comp Sci and Linguistics student at the University
     of Texas at Austin. I'm particularly interested in computational linguistics,
-    natural language processing, machine learning, and learning more...`,
+    natural language processing, maching learning, and language modeling.`,
     `I'm currently working as a Software Engineering Intern at UKG. Also known as Ultimate
     Kronos Group.`
   ]
