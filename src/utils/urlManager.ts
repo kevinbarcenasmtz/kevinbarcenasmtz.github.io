@@ -9,7 +9,11 @@ const sectionToPathMap: Record<string, string> = {
   'projects': '/projects',
   'trucking-logistics': '/trucking-logistics',
   'empire-football': '/empire-football',
+  'unidad-austin' : '/unidad-austin',
   'experience': '/experience',
+  'mayaLEX': '/mayaLEX',
+  'nahuatLEX': '/nahuatLEX',
+  'ukg-internship': '/ukg-internship',
   'notes': '/notes',
   'contact': '/contact',
   'resume': '/resume'

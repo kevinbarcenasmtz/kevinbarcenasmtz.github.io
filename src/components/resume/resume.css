@@ -7,6 +7,9 @@
 @import './styles/personal.css';
 @import './styles/notes.css';
 @import './styles/projectitem.css';
+@import './styles/experienceintro.css';
+@import './styles/experienceItem.css';
+
 
 /* Resume Button - Global Style */
 .resume-button {

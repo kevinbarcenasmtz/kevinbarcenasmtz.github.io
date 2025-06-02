@@ -11,6 +11,9 @@ export const tocItems: TocItem[] = [
   { id: 'empire-football', label: 'Empire Football League', depth: 2 },
   { id: 'unidad-austin', label: 'UNIDAD Central Texas', depth: 2 },
   { id: 'experience', label: 'Experience', depth: 1 },
+  { id: 'mayaLEX', label: 'MayaLEX', depth: 2},
+  { id: 'nahuatLEX', label: 'NahuatLEX', depth: 2},
+  { id: 'ukg-internship', label: "UKG Internship", depth: 2},
   { id: 'notes', label: 'Notes', depth: 1},
   { id: 'resume', label: 'Resume', depth: 1 },
 ];
@@ -31,6 +34,9 @@ export const sectionConfigs: SectionConfig[] = [
   { id: 'empire-football', title: 'Empire Football Group Platform', order: 6 },
   { id: 'unidad-austin', title: 'UNIDAD Central Texas', order: 7 },
   { id: 'experience', title: 'Experience', order: 8 }, 
-  { id: 'notes', title: 'Notes', order: 9},
-  { id: 'resume', title: 'Resume', order: 10 },
+  { id: 'mayaLEX', title: 'MayaLEX', order: 9},
+  { id: 'nahuatLEX', title: 'NahuatLEX', order: 10},
+  { id: 'ukg-internship', title: "UKG Internship", order: 11},
+  { id: 'notes', title: 'Notes', order: 12},
+  { id: 'resume', title: 'Resume', order: 13 },
 ];

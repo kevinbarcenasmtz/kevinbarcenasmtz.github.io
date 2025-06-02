@@ -2,7 +2,6 @@
 type ExperienceItemProps = {
   title: string;
   company: string;
-  location?: string;
   period: string;
   description: string[];
 };
@@ -10,7 +9,6 @@ type ExperienceItemProps = {
 export default function ExperienceItem({ 
   title, 
   company, 
-  location, 
   period, 
   description 
 }: ExperienceItemProps) {
@@ -18,10 +16,7 @@ export default function ExperienceItem({
     <div className="experience-item">
       <div className="experience-header">
         <h3>{title}</h3>
-        <p className="company">
-          {company}
-          {location && <span className="location">, {location}</span>}
-        </p>
+        <p className="company">{company}</p>
         <p className="period">{period}</p>
       </div>
       <ul className="experience-description">

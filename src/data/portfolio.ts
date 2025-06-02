@@ -85,12 +85,57 @@ export const personalContent = {
   ]
 };
 
-// Enhanced projects intro with animation
 export const projectsIntro = {
   title: "Featured Projects",
   description: "These are some of the projects I've worked on that I'm particularly interested in. Each represents a learning opportunity in my development journey."
 };
 
+export const experienceIntro = {
+  title: "Professional Experience",
+  description: "My journey in applying computer science and linguistics through meaningful work experiences that have shaped my technical skills and professional growth."
+};
+
+// UKG Internship Experience
+export const ukgInternshipExperience = {
+  title: 'Software Engineering Intern',
+  company: 'UKG (Ultimate Kronos Group)',
+  period: 'January 2025 - Present',
+  description: [
+    'Developing and maintaining enterprise-level human capital management software serving millions of users worldwide',
+    'Contributing to full-stack development using modern web technologies and cloud-based architecture',
+    'Collaborating with cross-functional teams in agile development environments to deliver scalable solutions',
+    'Participating in code reviews, technical design discussions, and sprint planning sessions',
+    'Working on features that directly impact workforce management and employee experience platforms'
+  ]
+};
+
+// Research Experience - MayaLEX
+export const mayaLexExperience = {
+  title: 'Computational Linguistics Research Assistant - MayaLEX',
+  company: 'Linguistics Research Center, University of Texas at Austin',
+  period: 'August 2023 - Present',
+  description: [
+    'Processing and analyzing over 50,000 Mayan language entries for the MayaLEX etymological dictionary project',
+    'Developing Python automation scripts that reduced data processing time by 60% while maintaining 98% accuracy',
+    'Implementing data classification algorithms for linguistic feature extraction and etymological analysis',
+    'Contributing to the successful launch of an online etymological dictionary accessed by linguistic scholars globally',
+    'Collaborating with linguists and researchers to ensure accurate representation of Mayan language families'
+  ]
+};
+
+// Research Experience - NahuatLEX  
+export const nahuatLexExperience = {
+  title: 'Computational Linguistics Research Assistant - NahuatLEX',
+  company: 'Linguistics Research Center, University of Texas at Austin', 
+  period: 'September 2024 - Present',
+  description: [
+    'Extending computational linguistics research to Nahuatl language documentation and analysis',
+    'Applying machine learning techniques to process and categorize Nahuatl etymological data',
+    'Building upon MayaLEX methodology to create comprehensive Nahuatl language resources',
+    'Developing cross-linguistic comparison tools between Mayan and Nahuatl language families',
+    'Contributing to indigenous language preservation through digital humanities and computational methods'
+  ]
+};
 export const resumeContent = {
   description: "You can download my full resume as a PDF by clicking the link below:",
   buttonText: "Download Resume (PDF)",

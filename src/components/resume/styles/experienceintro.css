@@ -1,0 +1,38 @@
+/* Experience Intro  */
+
+.experience-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: var(--resume-spacing-lg) 0;
+}
+
+.experience-intro-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--resume-text-primary);
+  margin-bottom: var(--resume-spacing-md);
+}
+
+.experience-intro-description {
+  font-size: 1rem;
+  color: var(--resume-text-secondary);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .experience-intro {
+    padding: var(--resume-spacing-md) 0;
+  }
+  
+  .experience-intro-title {
+    font-size: 1.6rem;
+  }
+  
+  .experience-intro-description {
+    font-size: 0.95rem;
+    padding: 0 var(--resume-spacing-md);
+  }
+}

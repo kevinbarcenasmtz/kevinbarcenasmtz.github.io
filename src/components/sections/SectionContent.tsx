@@ -1,6 +1,7 @@
 // src/components/sections/SectionContent.tsx - Add the new import and conditional
 import ProfileSection from '../resume/ProfileSection';
 import EducationSection from '../resume/EducationSection';
+import ExperienceIntro from '../resume/ExperienceIntro';
 import ExperienceItem from '../resume/ExperienceItem';
 import ProjectItem from '../resume/ProjectItem';
 import ProjectsIntro from '../resume/ProjectsIntro';
@@ -8,12 +9,15 @@ import NotesSection from '../resume/NotesSection';
 import ContactInfo from '../resume/ContactInfo';
 import PersonalSection from '../resume/PersonalSection';
 import {
-  researchExperience,
   truckingLogistics,
   empireFootballGroup,
   unidadAustinContent,
   projectsIntro,
-  resumeContent
+  resumeContent,
+  experienceIntro,
+  ukgInternshipExperience,
+  mayaLexExperience,
+  nahuatLexExperience,
 } from '../../data/portfolio';
 
 type SectionContentProps = {
@@ -50,9 +54,21 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
   }
 
   if (sectionId === 'experience') {
-    return <ExperienceItem {...researchExperience} />;
+    return <ExperienceIntro title={experienceIntro.title} description={experienceIntro.description} />;
   }
-  
+
+   if (sectionId === 'mayaLEX') {
+    return <ExperienceItem {...mayaLexExperience} />;
+  }
+
+  if (sectionId === 'nahuatLEX') {
+    return <ExperienceItem {...nahuatLexExperience} />;
+  }
+
+  if (sectionId === 'ukg-internship') {
+    return <ExperienceItem {...ukgInternshipExperience} />;
+  }
+
   if (sectionId === 'notes'){
     return <NotesSection/>;
   }
