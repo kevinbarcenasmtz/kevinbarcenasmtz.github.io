@@ -15,6 +15,9 @@ export const tocItems: TocItem[] = [
   { id: 'nahuatLEX', label: 'NahuatLEX', depth: 2},
   { id: 'ukg-internship', label: "UKG Internship", depth: 2},
   { id: 'notes', label: 'Notes', depth: 1},
+  { id: 'blogs', label: 'Blogs', depth: 2},
+  { id: 'papers', label: 'Papers', depth: 2},
+  { id: 'docs', label: 'Documentation', depth: 2},
   { id: 'resume', label: 'Resume', depth: 1 },
 ];
 
@@ -38,5 +41,8 @@ export const sectionConfigs: SectionConfig[] = [
   { id: 'nahuatLEX', title: 'NahuatLEX', order: 10},
   { id: 'ukg-internship', title: "UKG Internship", order: 11},
   { id: 'notes', title: 'Notes', order: 12},
-  { id: 'resume', title: 'Resume', order: 13 },
+  { id: 'blogs', title: 'Blogs', order: 13},
+  { id: 'papers', title: 'Papers', order: 14},
+  { id: 'docs', title: 'Documentation', order: 15},
+  { id: 'resume', title: 'Resume', order: 16 },
 ];

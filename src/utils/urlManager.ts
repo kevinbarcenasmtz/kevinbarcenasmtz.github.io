@@ -15,6 +15,9 @@ const sectionToPathMap: Record<string, string> = {
   'nahuatLEX': '/nahuatLEX',
   'ukg-internship': '/ukg-internship',
   'notes': '/notes',
+  'blogs': '/blogs',
+  'papers': '/papers',
+  'docs': '/documentation',
   'contact': '/contact',
   'resume': '/resume'
 };

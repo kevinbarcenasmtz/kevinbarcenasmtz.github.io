@@ -136,6 +136,12 @@ export const nahuatLexExperience = {
     'Contributing to indigenous language preservation through digital humanities and computational methods'
   ]
 };
+
+export const notesIntro = {
+  title: "Notes & Reflections",
+  description: "Thoughts on development, learning, and building better software"
+};
+
 export const resumeContent = {
   description: "You can download my full resume as a PDF by clicking the link below:",
   buttonText: "Download Resume (PDF)",

@@ -5,7 +5,7 @@ import ExperienceIntro from '../resume/ExperienceIntro';
 import ExperienceItem from '../resume/ExperienceItem';
 import ProjectItem from '../resume/ProjectItem';
 import ProjectsIntro from '../resume/ProjectsIntro';
-import NotesSection from '../resume/NotesSection';
+import NotesIntro from '../resume/NotesIntro';
 import ContactInfo from '../resume/ContactInfo';
 import PersonalSection from '../resume/PersonalSection';
 import {
@@ -18,7 +18,11 @@ import {
   ukgInternshipExperience,
   mayaLexExperience,
   nahuatLexExperience,
+  notesIntro,
 } from '../../data/portfolio';
+import BlogsSection from '../resume/BlogSection';
+import DocsSection from '../resume/DocsSection';
+import PapersSection from '../resume/PapersSection';
 
 type SectionContentProps = {
   sectionId: string;
@@ -70,7 +74,19 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
   }
 
   if (sectionId === 'notes'){
-    return <NotesSection/>;
+    return <NotesIntro title={notesIntro.title} description={notesIntro.description} />;
+  }
+
+  if (sectionId === 'blogs') {
+    return <BlogsSection />;
+  }
+
+  if (sectionId === 'docs') {
+    return <DocsSection />;
+  }
+
+  if (sectionId === 'papers') {
+    return <PapersSection />;
   }
   
   if (sectionId === 'contact') {
