@@ -13,16 +13,17 @@ import {
   empireFootballGroup,
   unidadAustinContent,
   projectsIntro,
-  resumeContent,
   experienceIntro,
   ukgInternshipExperience,
   mayaLexExperience,
   nahuatLexExperience,
   notesIntro,
+  miscIntro,
 } from '../../data/portfolio';
 import BlogsSection from '../resume/BlogSection';
 import DocsSection from '../resume/DocsSection';
 import PapersSection from '../resume/PapersSection';
+import PDFViewer from '../pdf/pdfViewer';
 
 type SectionContentProps = {
   sectionId: string;
@@ -61,8 +62,13 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
     return <ExperienceIntro title={experienceIntro.title} description={experienceIntro.description} />;
   }
 
-   if (sectionId === 'mayaLEX') {
-    return <ExperienceItem {...mayaLexExperience} />;
+  if (sectionId === 'mayaLEX') {
+    return (
+      <>
+        <ExperienceItem {...mayaLexExperience} />
+        <PDFViewer pdfUrl="/lingPoster.pdf" />
+      </>
+    );
   }
 
   if (sectionId === 'nahuatLEX') {
@@ -93,21 +99,10 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
     return <ContactInfo />;
   }
 
-  if (sectionId === 'resume') {
-    return (
-      <>
-        <p>{resumeContent.description}</p>
-        <a
-          href={resumeContent.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="resume-button"
-        >
-          {resumeContent.buttonText}
-        </a>
-      </>
-    );
+  if (sectionId === 'misc') {
+    return <ProjectsIntro title={miscIntro.title} description={miscIntro.description} />;
   }
+
 
   return null;
 }

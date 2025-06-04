@@ -2,42 +2,43 @@
 @import './styles/base.css';
 @import './styles/profile.css';
 @import './styles/education.css';
-@import './styles/projects.css';
+@import './styles/projectsintro.css';
 @import './styles/contact.css';
 @import './styles/personal.css';
 @import './styles/notes.css';
 @import './styles/projectitem.css';
 @import './styles/experienceintro.css';
 @import './styles/experienceitem.css';
+@import '../pdf/styles/pdf.css';
 
 
 /* Resume Button - Global Style */
 .resume-button {
-display: inline-block;
-margin: var(--resume-spacing-md) 0;
-padding: var(--resume-spacing-sm) var(--resume-spacing-md);
-background: var(--resume-primary-color);
-color: white;
-text-decoration: none;
-border-radius: 4px;
-transition: background-color 0.3s;
-font-weight: 500;
+    display: inline-block;
+    margin: var(--resume-spacing-md) 0;
+    padding: var(--resume-spacing-sm) var(--resume-spacing-md);
+    background: var(--resume-primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: 500;
 }
 
 .resume-button:hover {
-background-color: var(--resume-secondary-color);
+    background-color: var(--resume-secondary-color);
 }
 
 /* Mobile Resume Button */
 @media (max-width: 768px) {
-.resume-button {
-padding: 0.75rem var(--resume-spacing-md);
-display: block;
-width: 100%;
-text-align: center;
-box-sizing: border-box;
-}
-}
+    .resume-button {
+        padding: 0.75rem var(--resume-spacing-md);
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        }
+    }
 
 @media (max-width: 480px) {
 a[href="/resume.pdf"] {

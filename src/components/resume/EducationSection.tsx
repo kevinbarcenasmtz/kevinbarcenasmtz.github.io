@@ -22,6 +22,8 @@ export default function EducationSection() {
           <span>Analyzing Textual Data: Linguistic Stats</span>
           <span>Matrix Calculations & Linear Algebra</span>
           <span>Probability & Statistics</span>
+          <span>Phonetics: Production/Perception of Sounds</span>
+          <span>Syntax & Semantincs: Strucutre/Meaning</span>
         </div>
       </div>
     </div>

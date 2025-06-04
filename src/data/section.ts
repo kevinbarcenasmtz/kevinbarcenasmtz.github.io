@@ -18,7 +18,7 @@ export const tocItems: TocItem[] = [
   { id: 'blogs', label: 'Blogs', depth: 2},
   { id: 'papers', label: 'Papers', depth: 2},
   { id: 'docs', label: 'Documentation', depth: 2},
-  { id: 'resume', label: 'Resume', depth: 1 },
+  { id: 'misc', label: 'Miscellaneous', depth: 1 },
 ];
 
 export type SectionConfig = {
@@ -44,5 +44,5 @@ export const sectionConfigs: SectionConfig[] = [
   { id: 'blogs', title: 'Blogs', order: 13},
   { id: 'papers', title: 'Papers', order: 14},
   { id: 'docs', title: 'Documentation', order: 15},
-  { id: 'resume', title: 'Resume', order: 16 },
+  { id: 'misc', title: 'Miscellaneous', order: 16 },
 ];

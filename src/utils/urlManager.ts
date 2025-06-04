@@ -19,7 +19,8 @@ const sectionToPathMap: Record<string, string> = {
   'papers': '/papers',
   'docs': '/documentation',
   'contact': '/contact',
-  'resume': '/resume'
+  'misc': '/miscellaneous'
+
 };
 
 const pathToSectionMap: Record<string, string> = Object.fromEntries(

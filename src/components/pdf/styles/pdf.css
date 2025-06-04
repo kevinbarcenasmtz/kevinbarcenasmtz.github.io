@@ -1,0 +1,37 @@
+/* src/components/pdf/styles/pdf.css */
+.pdf-embed-container {
+  margin: var(--resume-spacing-lg) 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.pdf-object {
+  display: block;
+}
+
+.pdf-embed-container p {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+
+.pdf-embed-container a {
+  color: #317039;
+  text-decoration: none;
+}
+
+.pdf-embed-container a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .pdf-embed-container {
+    height: 400px;
+  }
+  
+  .pdf-object {
+    height: 100%;
+  }
+}

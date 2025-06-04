@@ -1,9 +1,11 @@
-// src/components/projects/MinimalProjectCard.tsx
+// src/components/resume/ProjectItem.tsx - Enhanced with workflow and architecture
 type MinimalProjectProps = {
   title: string;
   date: string;
   technologies: string[];
   description: string[];
+  workflow?: string[];
+  architecture?: string[];
   demoUrl?: string;
   githubUrl?: string;
 };
@@ -13,6 +15,8 @@ export default function MinimalProjectCard({
   date,
   description,
   technologies,
+  workflow,
+  architecture,
   demoUrl,
   githubUrl
 }: MinimalProjectProps) {
@@ -39,6 +43,21 @@ export default function MinimalProjectCard({
             <p key={index}>{desc}</p>
           ))}
         </div>
+
+        {workflow && (
+          <>
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="command">cat workflow_diagram.txt</span>
+            </div>
+            
+            <div className="terminal-workflow">
+              {workflow.map((line, index) => (
+                <div key={index} className="workflow-line">{line}</div>
+              ))}
+            </div>
+          </>
+        )}
        
         <div className="terminal-line">
           <span className="prompt">$</span>
@@ -52,6 +71,21 @@ export default function MinimalProjectCard({
             </span>
           ))}
         </div>
+
+        {architecture && (
+          <>
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="command">cat system_architecture.txt</span>
+            </div>
+            
+            <div className="terminal-architecture">
+              {architecture.map((line, index) => (
+                <div key={index} className="architecture-line">{line}</div>
+              ))}
+            </div>
+          </>
+        )}
        
         {(demoUrl || githubUrl) && (
           <>

@@ -1,0 +1,43 @@
+/* Projects Intro Styles */
+.projects-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: var(--resume-spacing-xl) 0;
+}
+
+.projects-intro-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--resume-text-primary);
+  margin-bottom: var(--resume-spacing-md);
+}
+
+.projects-intro-underline {
+  height: 3px;
+  background: linear-gradient(90deg, var(--resume-primary-color), var(--resume-secondary-color));
+  margin: 0 auto var(--resume-spacing-lg);
+  border-radius: 2px;
+  max-width: 150px;
+}
+
+.projects-intro-description {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .projects-intro {
+    padding: var(--resume-spacing-md) 0;
+  }
+  .projects-intro-title {
+    font-size: 1.8rem;
+  }
+  .projects-intro-description {
+    font-size: 1rem;
+    padding: 0 var(--resume-spacing-md);
+  }
+}

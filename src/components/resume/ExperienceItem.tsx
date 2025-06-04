@@ -4,13 +4,17 @@ type ExperienceItemProps = {
   company: string;
   period: string;
   description: string[];
+  linkUrl?: string; 
+  repoUrls?: string[];
 };
 
 export default function ExperienceItem({ 
   title, 
   company, 
   period, 
-  description 
+  description,
+  linkUrl,
+  repoUrls,
 }: ExperienceItemProps) {
   return (
     <div className="experience-item">
@@ -19,11 +23,33 @@ export default function ExperienceItem({
         <p className="company">{company}</p>
         <p className="period">{period}</p>
       </div>
-      <ul className="experience-description">
+      <div className="experience-description">
         {description.map((item, index) => (
-          <li key={index}>{item}</li>
+          <p key={index}>{item}</p>
         ))}
-      </ul>
+      </div>
+      {linkUrl && (
+        <div className="experience-link">
+          <a href={linkUrl} target="_blank" rel="noopener noreferrer">
+            Visit the website
+          </a>
+        </div>
+      )}
+      {repoUrls && repoUrls.length > 0 && (
+        <div className="experience-repolinks">
+          {repoUrls.map((url, index) => (
+            <a
+              key={index}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit repo {index + 1}
+            </a>
+          ))}
+        </div>
+      )}
     </div>
+
   );
 }

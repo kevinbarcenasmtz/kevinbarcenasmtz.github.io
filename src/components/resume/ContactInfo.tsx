@@ -1,4 +1,5 @@
 // src/components/resume/ContactInfo.tsx
+
 export default function ContactInfo() {
   return (
     <div className="contact-info">
@@ -22,8 +23,14 @@ export default function ContactInfo() {
           kevinbarcenas-mtz
         </a>
       </p>
-      <p>Email: kevin14767 @ utexas (dot) edu</p>
-      <p>Discord: kevin14767</p>
+      
+      <p>
+        Email: <span className="green">kevin14767 @ utexas (dot) edu</span>
+      </p>
+      <p>
+        Discord: <span className="green">kevin14767</span>
+      </p>
+
     </div>
   );
 }

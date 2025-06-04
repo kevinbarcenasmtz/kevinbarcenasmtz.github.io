@@ -129,3 +129,75 @@
     align-self: flex-end;
   }
 }
+
+.terminal-workflow {
+  margin: 0.5rem 0 1rem 1.5rem;
+  color: #2a2d2a;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.workflow-line {
+  margin: 0.2rem 0;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+/* Architecture diagram styles */
+.terminal-architecture {
+  margin: 0.5rem 0 1rem 1.5rem;
+  color: #2a2d2a;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.architecture-line {
+  margin: 0;
+  line-height: 1.2;
+  white-space: pre;
+}
+
+/* Enhanced command styling */
+.terminal-line .command {
+  color: #353b35;
+  font-weight: 500;
+}
+
+/* Special styling for workflow and architecture commands */
+.terminal-line:has(.command:contains("workflow_diagram")) .command,
+.terminal-line:has(.command:contains("system_architecture")) .command {
+  color: #5c705c;
+  font-weight: 600;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .terminal-workflow, .terminal-architecture {
+    margin-left: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .workflow-line {
+    font-size: 0.85rem;
+  }
+  
+  .architecture-line {
+    font-size: 0.75rem;
+    line-height: 1.1;
+  }
+  
+  /* Ensure box drawing characters display properly on mobile */
+  .terminal-architecture {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-workflow, .terminal-architecture {
+    margin-left: 0.5rem;
+  }
+  
+  .architecture-line {
+    font-size: 0.7rem;
+  }
+}
