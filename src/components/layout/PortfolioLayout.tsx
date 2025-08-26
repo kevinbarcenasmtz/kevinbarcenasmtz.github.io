@@ -1,8 +1,8 @@
 // src/components/layout/PortfolioLayout.tsx
-import React from 'react';
-import TableOfContents from '../sidebar/TableOfContents';
-import MobileNav from '../sidebar/MobileNav';
-import { TocItem } from '../../hooks/useToc';
+import React from "react";
+import TableOfContents from "../sidebar/TableOfContents";
+import MobileNav from "../sidebar/MobileNav";
+import { TocItem } from "../../hooks/useToc";
 
 type PortfolioLayoutProps = {
   isMobile: boolean;
@@ -11,11 +11,11 @@ type PortfolioLayoutProps = {
   children: React.ReactNode;
 };
 
-export default function PortfolioLayout({ 
-  isMobile, 
-  tocItems, 
-  activeIndex, 
-  children 
+export default function PortfolioLayout({
+  isMobile,
+  tocItems,
+  activeIndex,
+  children,
 }: PortfolioLayoutProps) {
   return (
     <div className="container">
@@ -29,9 +29,7 @@ export default function PortfolioLayout({
         </aside>
       )}
 
-      <main className="main">
-        {children}
-      </main>
+      <main className="main">{children}</main>
     </div>
   );
 }

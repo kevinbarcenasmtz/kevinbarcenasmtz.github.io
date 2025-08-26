@@ -18,7 +18,7 @@ export default function MinimalProjectCard({
   workflow,
   architecture,
   demoUrl,
-  githubUrl
+  githubUrl,
 }: MinimalProjectProps) {
   return (
     <div className="terminal-card">
@@ -31,13 +31,13 @@ export default function MinimalProjectCard({
         <span className="terminal-title">{title}</span>
         <span className="terminal-date">{date}</span>
       </div>
-     
+
       <div className="terminal-body">
         <div className="terminal-line">
           <span className="prompt">$</span>
           <span className="command">cat project_info.txt</span>
         </div>
-       
+
         <div className="terminal-output">
           {description.map((desc, index) => (
             <p key={index}>{desc}</p>
@@ -50,24 +50,27 @@ export default function MinimalProjectCard({
               <span className="prompt">$</span>
               <span className="command">cat workflow_diagram.txt</span>
             </div>
-            
+
             <div className="terminal-workflow">
               {workflow.map((line, index) => (
-                <div key={index} className="workflow-line">{line}</div>
+                <div key={index} className="workflow-line">
+                  {line}
+                </div>
               ))}
             </div>
           </>
         )}
-       
+
         <div className="terminal-line">
           <span className="prompt">$</span>
           <span className="command">ls technologies/</span>
         </div>
-       
+
         <div className="terminal-tech">
           {technologies.map((tech, i) => (
             <span key={tech} className="terminal-tech-item">
-              {tech}{i < technologies.length - 1 ? '  ' : ''}
+              {tech}
+              {i < technologies.length - 1 ? "  " : ""}
             </span>
           ))}
         </div>
@@ -78,15 +81,17 @@ export default function MinimalProjectCard({
               <span className="prompt">$</span>
               <span className="command">cat system_architecture.txt</span>
             </div>
-            
+
             <div className="terminal-architecture">
               {architecture.map((line, index) => (
-                <div key={index} className="architecture-line">{line}</div>
+                <div key={index} className="architecture-line">
+                  {line}
+                </div>
               ))}
             </div>
           </>
         )}
-       
+
         {(demoUrl || githubUrl) && (
           <>
             <div className="terminal-line">
@@ -94,8 +99,16 @@ export default function MinimalProjectCard({
               <span className="command">open links</span>
             </div>
             <div className="terminal-links">
-              {demoUrl && <a href={demoUrl} target="_blank" rel="noopener noreferrer">[demo]</a>}
-              {githubUrl && <a href={githubUrl} target="_blank" rel="noopener noreferrer">[code]</a>}
+              {demoUrl && (
+                <a href={demoUrl} target="_blank" rel="noopener noreferrer">
+                  [demo]
+                </a>
+              )}
+              {githubUrl && (
+                <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                  [code]
+                </a>
+              )}
             </div>
           </>
         )}

@@ -22,8 +22,8 @@
   align-items: center;
   margin-bottom: var(--resume-spacing-lg);
   padding: var(--resume-spacing-sm) 0;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .education-details span {
@@ -67,11 +67,11 @@
     align-items: flex-start;
     gap: var(--resume-spacing-sm);
   }
-  
+
   .course-list {
     gap: 0.3rem;
   }
-  
+
   .course-list span {
     font-size: 0.85rem;
     padding: 0.3rem 0.6rem;

@@ -1,8 +1,8 @@
 // src/components/sidebar/TableOfContents.tsx
-import { useRef } from 'react';
-import { useToc, type TocItem } from '../../hooks/useToc';
-import { URLManager } from '../../utils/urlManager';
-import './toc.css';
+import { useRef } from "react";
+import { useToc, type TocItem } from "../../hooks/useToc";
+import { URLManager } from "../../utils/urlManager";
+import "./toc.css";
 
 type Props = {
   items: TocItem[];
@@ -13,7 +13,10 @@ export default function TableOfContents({ items, activeIndex }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const tocInfo = useToc(items, activeIndex, containerRef);
 
-  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+  const handleLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
     event.preventDefault();
     URLManager.navigateToSection(sectionId);
   };
@@ -22,9 +25,9 @@ export default function TableOfContents({ items, activeIndex }: Props) {
     ? encodeURIComponent(
         `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${tocInfo.width} ${tocInfo.height}">
           <path d="${tocInfo.path}" stroke="rgba(0,0,0,0.3)" stroke-width="4" fill="none" />
-        </svg>`
+        </svg>`,
       )
-    : '';
+    : "";
 
   return (
     <div className="toc-container">
@@ -56,7 +59,7 @@ export default function TableOfContents({ items, activeIndex }: Props) {
             key={item.label}
             href={URLManager.generateTocUrl(item.id)}
             onClick={(e) => handleLinkClick(e, item.id)}
-            className={`toc-link ${i === activeIndex ? 'active' : ''}`}
+            className={`toc-link ${i === activeIndex ? "active" : ""}`}
             style={{
               paddingLeft: `${item.depth >= 2 ? item.depth * 16 : 12}px`,
             }}

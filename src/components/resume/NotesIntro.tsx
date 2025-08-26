@@ -1,5 +1,5 @@
 // src/components/resume/NotesIntro.tsx
-import { motion } from 'motion/react';
+import { motion } from "motion/react";
 
 type NotesIntroProps = {
   title: string;
@@ -8,7 +8,7 @@ type NotesIntroProps = {
 
 export default function NotesIntro({ title, description }: NotesIntroProps) {
   return (
-    <motion.div 
+    <motion.div
       className="notes-intro"
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}

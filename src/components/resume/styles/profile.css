@@ -3,73 +3,74 @@
   margin-bottom: var(--resume-spacing-xl);
 }
 .profile-content {
-display: flex;
-align-items: flex-start;
-gap: var(--resume-spacing-xl);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--resume-spacing-xl);
 }
 .profile-text {
-flex: 1;
-display: flex;
-flex-direction: column;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .profile-header {
-text-align: right;
-margin-bottom: var(--resume-spacing-lg);
+  text-align: right;
+  margin-bottom: var(--resume-spacing-lg);
 }
 .profile-paragraphs {
-text-align: left;
-line-height: 1.1;
-padding-left: var(--resume-spacing-md);
-border-left: 2px solid var(--resume-primary-color);
-margin-top: var(--resume-spacing-md);
+  text-align: left;
+  line-height: 1.1;
+  padding-left: var(--resume-spacing-md);
+  border-left: 2px solid var(--resume-primary-color);
+  margin-top: var(--resume-spacing-md);
 }
 .profile-paragraphs p {
-margin-bottom: var(--resume-spacing-lg);
-color: var(--resume-text-secondary);
+  margin-bottom: var(--resume-spacing-lg);
+  color: var(--resume-text-secondary);
 }
 .name {
-margin: 0 0 var(--resume-spacing-sm) 0;
-font-weight: 600;
-color: var(--resume-text-primary);
+  margin: 0 0 var(--resume-spacing-sm) 0;
+  font-weight: 600;
+  color: var(--resume-text-primary);
 }
 .subtitle {
-color: var(--resume-text-secondary);
-margin-bottom: 0.25rem;
-font-weight: 500;
+  color: var(--resume-text-secondary);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
 }
 .location {
-color: var(--resume-text-muted);
-margin: 0;
+  color: var(--resume-text-muted);
+  margin: 0;
 }
 .headshot {
-flex-shrink: 0;
-border-radius: 8px;
-width: 400px;
-height: 500px;
-object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 8px;
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
 }
 /* Mobile Styles */
 @media (max-width: 768px) {
-.profile-content {
-flex-direction: column;
-text-align: center;
-gap: var(--resume-spacing-md);
-}
-.profile-text, .profile-header {
-text-align: center;
-}
-.profile-paragraphs {
-text-align: left;
-}
-.headshot {
-width: 150px;
-height: 150px;
-align-self: center;
-}
+  .profile-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--resume-spacing-md);
+  }
+  .profile-text,
+  .profile-header {
+    text-align: center;
+  }
+  .profile-paragraphs {
+    text-align: left;
+  }
+  .headshot {
+    width: 150px;
+    height: 150px;
+    align-self: center;
+  }
 }
 @media (max-width: 480px) {
-.headshot {
-width: 180px;
-height: 280px;
-}
+  .headshot {
+    width: 180px;
+    height: 280px;
+  }
 }

@@ -102,7 +102,7 @@
 .experience-link {
   margin-top: 1.25rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .experience-link a {
@@ -128,7 +128,7 @@
 }
 
 .experience-link a::after {
-  content: '→';
+  content: "→";
   font-weight: 600;
   transition: transform 0.3s ease;
 }
@@ -164,7 +164,7 @@
 .experience-repolinks {
   margin-top: 1.25rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -196,7 +196,7 @@
 }
 
 .experience-repolinks a::after {
-  content: '→';
+  content: "→";
   font-weight: 600;
   margin-left: 0.5rem;
   transition: transform 0.3s ease;

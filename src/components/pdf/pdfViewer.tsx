@@ -8,11 +8,11 @@ type PDFViewerProps = {
   className?: string;
 };
 
-export default function PDFViewer({ 
-  pdfUrl, 
-  width = "100%", 
-  height = "800px", 
-  className = "" 
+export default function PDFViewer({
+  pdfUrl,
+  width = "100%",
+  height = "800px",
+  className = "",
 }: PDFViewerProps) {
   return (
     <div className={`pdf-embed-container ${className}`}>
@@ -24,7 +24,7 @@ export default function PDFViewer({
         className="pdf-object"
       >
         <p>
-          Your browser doesn't support PDF viewing. 
+          Your browser doesn't support PDF viewing.
           <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
             Download the PDF instead
           </a>

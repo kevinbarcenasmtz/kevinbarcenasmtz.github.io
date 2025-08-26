@@ -1,5 +1,5 @@
 // src/components/resume/DocsSection.tsx
-import { sampleDocs } from '../../data/note';
+import { sampleDocs } from "../../data/note";
 
 export default function DocsSection() {
   return (
@@ -14,20 +14,22 @@ export default function DocsSection() {
               </div>
               <span className="content-date">{doc.date}</span>
             </div>
-            
+
             <p className="content-description">{doc.description}</p>
-            
+
             <div className="content-tags">
               {doc.tags.map((tag) => (
-                <span key={tag} className="content-tag">{tag}</span>
+                <span key={tag} className="content-tag">
+                  {tag}
+                </span>
               ))}
             </div>
-            
+
             {doc.url && (
               <div className="content-actions">
-                <a 
-                  href={doc.url} 
-                  target="_blank" 
+                <a
+                  href={doc.url}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="content-link"
                 >

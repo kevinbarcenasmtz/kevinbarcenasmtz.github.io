@@ -4,14 +4,14 @@ type ExperienceItemProps = {
   company: string;
   period: string;
   description: string[];
-  linkUrl?: string; 
+  linkUrl?: string;
   repoUrls?: string[];
 };
 
-export default function ExperienceItem({ 
-  title, 
-  company, 
-  period, 
+export default function ExperienceItem({
+  title,
+  company,
+  period,
   description,
   linkUrl,
   repoUrls,
@@ -38,18 +38,12 @@ export default function ExperienceItem({
       {repoUrls && repoUrls.length > 0 && (
         <div className="experience-repolinks">
           {repoUrls.map((url, index) => (
-            <a
-              key={index}
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a key={index} href={url} target="_blank" rel="noopener noreferrer">
               Visit repo {index + 1}
             </a>
           ))}
         </div>
       )}
     </div>
-
   );
 }

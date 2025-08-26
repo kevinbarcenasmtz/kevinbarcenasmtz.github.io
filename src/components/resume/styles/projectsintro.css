@@ -14,7 +14,11 @@
 
 .projects-intro-underline {
   height: 3px;
-  background: linear-gradient(90deg, var(--resume-primary-color), var(--resume-secondary-color));
+  background: linear-gradient(
+    90deg,
+    var(--resume-primary-color),
+    var(--resume-secondary-color)
+  );
   margin: 0 auto var(--resume-spacing-lg);
   border-radius: 2px;
   max-width: 150px;

@@ -26,11 +26,11 @@
   .experience-intro {
     padding: var(--resume-spacing-md) 0;
   }
-  
+
   .experience-intro-title {
     font-size: 1.6rem;
   }
-  
+
   .experience-intro-description {
     font-size: 0.95rem;
     padding: 0 var(--resume-spacing-md);

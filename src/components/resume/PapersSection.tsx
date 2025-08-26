@@ -1,5 +1,5 @@
 // src/components/resume/PapersSection.tsx
-import { samplePapers } from '../../data/note';
+import { samplePapers } from "../../data/note";
 
 export default function PapersSection() {
   return (
@@ -10,7 +10,9 @@ export default function PapersSection() {
             <div className="content-header">
               <div className="content-title-row">
                 <h3 className="content-title">{paper.title}</h3>
-                <span className={`content-status-badge ${paper.status.toLowerCase().replace(' ', '-')}`}>
+                <span
+                  className={`content-status-badge ${paper.status.toLowerCase().replace(" ", "-")}`}
+                >
                   {paper.status}
                 </span>
               </div>
@@ -19,20 +21,24 @@ export default function PapersSection() {
                 <span className="content-date">{paper.date}</span>
               </div>
             </div>
-            
-            <p className="content-description paper-abstract">{paper.abstract}</p>
-            
+
+            <p className="content-description paper-abstract">
+              {paper.abstract}
+            </p>
+
             <div className="content-tags">
               {paper.tags.map((tag) => (
-                <span key={tag} className="content-tag">{tag}</span>
+                <span key={tag} className="content-tag">
+                  {tag}
+                </span>
               ))}
             </div>
-            
+
             <div className="content-actions">
               {paper.pdfUrl && (
-                <a 
-                  href={paper.pdfUrl} 
-                  target="_blank" 
+                <a
+                  href={paper.pdfUrl}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="content-link primary"
                 >
@@ -40,9 +46,9 @@ export default function PapersSection() {
                 </a>
               )}
               {paper.url && (
-                <a 
-                  href={paper.url} 
-                  target="_blank" 
+                <a
+                  href={paper.url}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="content-link secondary"
                 >

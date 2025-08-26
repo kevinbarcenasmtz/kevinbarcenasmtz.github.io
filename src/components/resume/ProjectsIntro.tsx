@@ -1,14 +1,17 @@
-// src/components/resume/ProjectsIntro.tsx - Keep once: true with better settings
-import { motion } from 'motion/react';
+// src/components/resume/ProjectsIntro.tsx
+import { motion } from "motion/react";
 
 type ProjectsIntroProps = {
   title: string;
   description: string;
 };
 
-export default function ProjectsIntro({ title, description }: ProjectsIntroProps) {
+export default function ProjectsIntro({
+  title,
+  description,
+}: ProjectsIntroProps) {
   return (
-    <motion.div 
+    <motion.div
       className="projects-intro"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -24,15 +27,15 @@ export default function ProjectsIntro({ title, description }: ProjectsIntroProps
       >
         {title}
       </motion.h2>
-      
-      <motion.div 
+
+      <motion.div
         className="projects-intro-underline"
         initial={{ width: 0 }}
-        whileInView={{ width: '100%' }}
+        whileInView={{ width: "100%" }}
         viewport={{ once: true }}
         transition={{ delay: 0.5, duration: 1, ease: [0.4, 0, 0.2, 1] }}
       />
-      
+
       <motion.p
         className="projects-intro-description"
         initial={{ opacity: 0 }}

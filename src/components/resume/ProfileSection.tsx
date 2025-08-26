@@ -6,11 +6,14 @@ export default function ProfileSection() {
   return (
     <div className="profile-section">
       <div className="profile-content">
-        <img className="headshot" src={headshot} alt="Kevin Barcenas-Martinez's Headshot" />
+        <img
+          className="headshot"
+          src={headshot}
+          alt="Kevin Barcenas-Martinez's Headshot"
+        />
         <div className="profile-text">
           <div className="profile-header">
             <h3 className="name">Kevin Barcenas-Martinez</h3>
-            <p className="subtitle">Computer Science & Linguistics Student @ UT Austin</p>
             <p className="location">Based in Austin, Texas</p>
           </div>
           <div className="profile-paragraphs">

@@ -4,13 +4,13 @@
 :root {
   --mobile-breakpoint: 768px;
   --small-mobile-breakpoint: 480px;
-  
+
   /* Consistent spacing system */
   --mobile-padding: 20px;
   --mobile-section-margin: 1.5rem;
   --small-mobile-padding: 15px;
   --small-mobile-section-margin: 1rem;
-  
+
   /* Mobile typography */
   --mobile-h1-size: 24px;
   --mobile-h2-size: 20px;
@@ -19,33 +19,33 @@
 }
 
 /* Common mobile utilities */
-.mobile-only { 
-  display: none; 
+.mobile-only {
+  display: none;
 }
 
-.desktop-only { 
-  display: block; 
+.desktop-only {
+  display: block;
 }
 
 @media (max-width: 768px) {
-  .mobile-only { 
-    display: block; 
+  .mobile-only {
+    display: block;
   }
-  
-  .desktop-only { 
-    display: none; 
+
+  .desktop-only {
+    display: none;
   }
-  
+
   /* Common mobile patterns */
   .mobile-full-width {
     width: 100%;
     box-sizing: border-box;
   }
-  
+
   .mobile-center {
     text-align: center;
   }
-  
+
   .mobile-stack {
     flex-direction: column;
     align-items: flex-start;

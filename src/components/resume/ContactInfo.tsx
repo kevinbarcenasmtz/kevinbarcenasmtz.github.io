@@ -23,14 +23,13 @@ export default function ContactInfo() {
           kevinbarcenas-mtz
         </a>
       </p>
-      
+
       <p>
         Email: <span className="green">kevin14767 @ utexas (dot) edu</span>
       </p>
       <p>
         Discord: <span className="green">kevin14767</span>
       </p>
-
     </div>
   );
 }

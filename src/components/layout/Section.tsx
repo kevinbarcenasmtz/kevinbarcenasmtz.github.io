@@ -1,5 +1,5 @@
 // src/components/layout/Section.tsx
-import React, { RefObject } from 'react';
+import React, { RefObject } from "react";
 
 type SectionProps = {
   id: string;
@@ -9,11 +9,11 @@ type SectionProps = {
   sectionRefs: RefObject<HTMLElement[]>;
 };
 
-export default function Section({ 
-  id, 
-  index, 
-  children, 
-  sectionRefs 
+export default function Section({
+  id,
+  index,
+  children,
+  sectionRefs,
 }: SectionProps) {
   return (
     <section

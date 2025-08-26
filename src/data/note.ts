@@ -16,7 +16,7 @@ export type Document = {
   date: string;
   description: string;
   url?: string;
-  type: 'API' | 'Guide' | 'Tutorial' | 'Reference';
+  type: "API" | "Guide" | "Tutorial" | "Reference";
   tags: string[];
 };
 
@@ -29,7 +29,7 @@ export type Paper = {
   pdfUrl?: string;
   url?: string;
   tags: string[];
-  status: 'Published' | 'In Review' | 'Draft';
+  status: "Published" | "In Review" | "Draft";
 };
 
 export const sampleBlogs: BlogPost[] = [
@@ -54,7 +54,6 @@ export const sampleDocs: Document[] = [
   //   type: 'API',
   //   tags: ['API', 'Documentation', 'Linguistics']
   // },
-  
 ];
 
 export const samplePapers: Paper[] = [

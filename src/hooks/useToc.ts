@@ -1,11 +1,10 @@
-import { useEffect, useState, RefObject } from 'react';
+import { useEffect, useState, RefObject } from "react";
 
 export type TocItem = {
-  id: string;    // used in href and querySelector
+  id: string; // used in href and querySelector
   label: string; // shown in the sidebar
   depth: number;
 };
-
 
 export type TocInfo = {
   path: string;
@@ -17,10 +16,10 @@ export type TocInfo = {
 export function useToc(
   items: TocItem[],
   activeIndex: number,
-  containerRef: RefObject<HTMLDivElement | null>
+  containerRef: RefObject<HTMLDivElement | null>,
 ): TocInfo {
   const [tocInfo, setTocInfo] = useState<TocInfo>({
-    path: '',
+    path: "",
     width: 0,
     height: 0,
     thumbPosition: [0, 0],
@@ -33,7 +32,7 @@ export function useToc(
     const updateInfo = () => {
       if (container.clientHeight === 0) return;
 
-      const links = container.querySelectorAll<HTMLAnchorElement>('.toc-link');
+      const links = container.querySelectorAll<HTMLAnchorElement>(".toc-link");
       const pathCommands: string[] = [];
 
       let width = 0;
@@ -80,7 +79,7 @@ export function useToc(
       });
 
       setTocInfo({
-        path: pathCommands.join(' '),
+        path: pathCommands.join(" "),
         width: width + 1,
         height,
         thumbPosition: [thumbTop, thumbHeight],

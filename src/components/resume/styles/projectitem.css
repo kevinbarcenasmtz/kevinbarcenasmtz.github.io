@@ -4,7 +4,7 @@
   border-radius: 8px;
   background: #f0fff0;
   overflow: hidden;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
   border: 1px solid #8fae8f;
 }
 
@@ -28,9 +28,15 @@
   border-radius: 50%;
 }
 
-.dot.red { background: #bfd454; }
-.dot.yellow { background: #e5fb79; }
-.dot.green { background: #cbe25a; }
+.dot.red {
+  background: #bfd454;
+}
+.dot.yellow {
+  background: #e5fb79;
+}
+.dot.green {
+  background: #cbe25a;
+}
 
 .terminal-title {
   color: #c8e4c8;
@@ -42,7 +48,7 @@
 .terminal-date {
   color: #a1b5a1;
   font-size: 0.8rem;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
   margin-left: auto;
 }
 
@@ -117,13 +123,13 @@
     padding: 0.75rem;
     font-size: 0.85rem;
   }
-  
+
   .terminal-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
- 
+
   .terminal-date {
     margin-left: 0;
     align-self: flex-end;
@@ -133,7 +139,7 @@
 .terminal-workflow {
   margin: 0.5rem 0 1rem 1.5rem;
   color: #2a2d2a;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
 }
 
 .workflow-line {
@@ -146,7 +152,7 @@
 .terminal-architecture {
   margin: 0.5rem 0 1rem 1.5rem;
   color: #2a2d2a;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
   font-size: 0.85rem;
 }
 
@@ -171,20 +177,21 @@
 
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
-  .terminal-workflow, .terminal-architecture {
+  .terminal-workflow,
+  .terminal-architecture {
     margin-left: 1rem;
     font-size: 0.8rem;
   }
-  
+
   .workflow-line {
     font-size: 0.85rem;
   }
-  
+
   .architecture-line {
     font-size: 0.75rem;
     line-height: 1.1;
   }
-  
+
   /* Ensure box drawing characters display properly on mobile */
   .terminal-architecture {
     overflow-x: auto;
@@ -193,10 +200,11 @@
 }
 
 @media (max-width: 480px) {
-  .terminal-workflow, .terminal-architecture {
+  .terminal-workflow,
+  .terminal-architecture {
     margin-left: 0.5rem;
   }
-  
+
   .architecture-line {
     font-size: 0.7rem;
   }

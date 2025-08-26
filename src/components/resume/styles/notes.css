@@ -53,7 +53,8 @@
   font-style: italic;
 }
 
-.content-type-badge, .content-status-badge {
+.content-type-badge,
+.content-status-badge {
   padding: 0.25rem 0.75rem;
   border-radius: 16px;
   font-size: 0.8rem;
@@ -126,7 +127,7 @@
   gap: var(--resume-spacing-md);
   margin-top: var(--resume-spacing-md);
   padding-top: var(--resume-spacing-md);
-  border-top: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .content-link {
@@ -164,25 +165,26 @@
   .content-card {
     padding: var(--resume-spacing-md);
   }
-  
+
   .content-title-row {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--resume-spacing-sm);
   }
-  
+
   .paper-meta {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
   }
-  
+
   .content-actions {
     flex-direction: column;
     gap: 0.75rem;
   }
-  
-  .content-link.primary, .content-link.secondary {
+
+  .content-link.primary,
+  .content-link.secondary {
     text-align: center;
     display: block;
   }
