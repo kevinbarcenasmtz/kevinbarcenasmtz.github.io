@@ -50,7 +50,7 @@ export const empireFootballGroup = {
     "Initially hosted on Vercel but later migrated to Cloudflare, this project served as a great introduction to React principles including the useful routing service Next.js provides.",
     "Integrating MongoDB as the database service was also interesting. Looking at the use case in retrospect, the data structure is incredibly flexible, so it was a good choice at the time.",
   ],
-  demoUrl: "https://www.empirefootballleague-atx.com/",
+  demoUrl: "https://www.empirefootballgroupatx.com/",
   githubUrl: "https://github.com/kevinbarcenasmtz/EmpireFootballGroup",
 };
 

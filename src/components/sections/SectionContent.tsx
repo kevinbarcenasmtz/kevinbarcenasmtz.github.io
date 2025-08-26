@@ -73,11 +73,11 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
     );
   }
 
-  if (sectionId === "mayaLEX") {
+  if (sectionId === "ukg-internship") {
     return (
       <>
-        <ExperienceItem {...mayaLexExperience} />
-        <PDFViewer pdfUrl="/lingPoster.pdf" />
+        <ExperienceItem {...ukgInternshipExperience} />
+        <PDFViewer pdfUrl="/ukg-presentation.pdf" />
       </>
     );
   }
@@ -86,13 +86,13 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
     return <ExperienceItem {...nahuatLexExperience} />;
   }
 
-  if (sectionId === "ukg-internship") {
+  if (sectionId === "mayaLEX") {
     return (
-    <>
-    <ExperienceItem {...ukgInternshipExperience} />
-    <PDFViewer pdfUrl="/ukg-presentation.pdf" />
-    </>
-  );
+      <>
+        <ExperienceItem {...mayaLexExperience} />
+        <PDFViewer pdfUrl="/lingPoster.pdf" />
+      </>
+    );
   }
 
   if (sectionId === "notes") {
