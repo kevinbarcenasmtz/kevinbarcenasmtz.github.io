@@ -189,3 +189,59 @@
     display: block;
   }
 }
+
+.content-author {
+  color: var(--resume-text-secondary);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: var(--resume-spacing-sm);
+}
+
+.book-status {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--resume-spacing-md);
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.currently-reading {
+  background: var(--resume-primary-color);
+  color: white;
+}
+.status-badge.wanting-to-read {
+  background: #ffc107;
+  color: #212529;
+}
+.status-badge.completed {
+  background: #28a745;
+  color: white;
+}
+.reading-list-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--resume-text-primary);
+  margin: 0 0 var(--resume-spacing-xl) 0;
+  text-align: center;
+  position: relative;
+}
+
+.reading-list-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--resume-primary-color),
+    var(--resume-secondary-color)
+  );
+  margin: var(--resume-spacing-md) auto 0;
+  border-radius: 2px;
+}

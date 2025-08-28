@@ -200,5 +200,52 @@ export const notesIntro = {
 export const miscIntro = {
   title: "Miscellaneous",
   description:
-    "Not entirely sure what to include in this section! It'll eventually be populated though with stuff I find fun or interesting.",
+    "As of now, I recently added a reading list of books that I've read or want to read. More stuff will be added here in the future.",
 };
+
+export const readingList = [
+  {
+    id: "book-1",
+    title: "Fifth Sun: A New History of the Aztecs",
+    author: "Camilla Townsend",
+    status: "Currently Reading" as const,
+    notes: `In November 1519, Hernando Cortés walked along a causeway leading to the capital of the Aztec kingdom and came face to face with Moctezuma. That story--and the story of what happened afterwards--has been told many times, but always following the narrative offered by the Spaniards. After all, we have been taught, it was the Europeans who held the pens. But the Native Americans were intrigued by the Roman alphabet and, unbeknownst to the newcomers, they used it to write detailed histories in their own language of Nahuatl. Until recently, these sources remained obscure, only partially translated, and rarely consulted by scholars.
+For the first time, in Fifth Sun, the history of the Aztecs is offered in all its complexity based solely on the texts written by the indigenous people themselves. Camilla Townsend presents an accessible and humanized depiction of these native Mexicans, rather than seeing them as the exotic, bloody figures of European stereotypes. The conquest, in this work, is neither an apocalyptic moment, nor an origin story launching Mexicans into existence. The Mexica people had a history of their own long before the Europeans arrived and did not simply capitulate to Spanish culture and colonization. Instead, they realigned their political allegiances, accommodated new obligations, adopted new technologies, and endured.
+This engaging revisionist history of the Aztecs, told through their own words, explores the experience of a once-powerful people facing the trauma of conquest and finding ways to survive, offering an empathetic interpretation for experts and non-specialists alike. `,
+  },
+  {
+    id: "book-2",
+    title: "Out of Aztlan",
+    author: "V. Castro",
+    status: "Wanting to Read" as const,
+    notes:
+      "An ancient goddess rises up from an inverted temple in a lake of blood to purify the earth. Two pearl divers plot revenge against the Spanish merchants who enslave them. A mutant species of jellyfish fueled by garbage heaps wreaks havoc on beachgoers. Aided by mermaids, a pirate known as The Scorpion and her all-female crew challenge a corrupt king. And back on dry land, a mother avenges the daughters of her community with a very special batch of ancho chili salsa.",
+  },
+  {
+    id: "book-3",
+    title: "Prayers for the Stolen",
+    author: "Jennifer Clement",
+    status: "Wanting to Read" as const,
+    notes: `Ladydi Garcia Martínez is fierce, funny, and smart. She was born into a world where being a girl is a dangerous thing. In the mountains of Guerrero, Mexico, women must fend for themselves, as their men have left to seek opportunities elsewhere. Here in the shadow of the drug war, bodies turn up on the outskirts of the village to be taken back to the earth by scorpions and snakes. School is held sporadically, when a volunteer can be coerced away from the big city for a semester. In Guerrero the drug lords are kings, and mothers disguise their daughters as sons, or when that fails they “make them ugly”—cropping their hair, blackening their teeth, anything to protect them from the rapacious grasp of the cartels. And when the black SUVs roll through town, Ladydi and her friends burrow into holes in their backyards like animals, tucked safely out of sight.
+While her mother waits in vain for her husband’s return, Ladydi and her friends dream of a future that holds more promise than mere survival, finding humor, solidarity, and fun in the face of so much tragedy. When Ladydi is offered work as a nanny for a wealthy family in Acapulco, she seizes the chance, and finds her first taste of love with a young caretaker there. But when a local murder tied to the cartel implicates a friend, Ladydi’s future takes a dark turn. Despite the odds against her, this spirited heroine’s resilience and resolve bring hope to otherwise heartbreaking conditions.
+An illuminating and affecting portrait of women in rural Mexico, and a stunning exploration of the hidden consequences of an unjust war, Prayers for the Stolen is an unforgettable story of friendship, family, and determination.`,
+  },
+  {
+    id: "book-4",
+    title: "Contra el apagón: Voces de Gaza durante la guerra en curso",
+    author: "Shadi Rohana",
+    status: "Currently Reading" as const,
+    notes: `Los textos reunidos en este libro fueron escritos por mujeres y hombres del mundo de la cultura, varios de ellos poetas y narradores. Todos los textos dan cuenta de una escritura urgente de los habitantes de esa gran cárcel a cielo abierto que ha sido Gaza durante décadas, y que durante los últimos meses han vivido la embestida de la política de limpieza étnica transformada en genocidio que lleva adelante el Estado de Israel.
+La mayoría de estos escritos fueron subidos a la red por sus autores –Facebook, Twitter o blog–. A la fecha, varios de ellos han sido asesinados por las bombas del ejército israelí.
+29 de octubre de 2023, 4:22 de la tarde
+Me llamo Nur Al-Din Hayyay. Soy escritor palestino. Tengo 27 años y muchos sueños. No soy un número y me opongo a que anuncien mi muerte en una noticia pasajera sin mención de cuánto amé la vida, la felicidad, la libertad, la risa de los niños, el mar, el café, la escritura, Feiruz y todo lo alegre.`,
+  },
+  {
+    id: "book-5",
+    title:
+      "El capital: Crítica de la economía política, tomo I, Libro I. El proceso de producción del capital",
+    author: "Marx, Carlos",
+    status: "Currently Reading" as const,
+    notes: `La obra se considera como núcleo de la teoría del nacimiento y de la circulación del capital, así como de su función determinante en el proceso entero de los bienes económicos. Además de la nueva traducción de Wenceslao Roces, la obra se enriquece con prólogos de Ignacio Perrotini y Ricardo Campa, las cartas intercambiadas entre Marx y algunos de sus contemporáneos, y una serie de artículos de Federico Engels referentes a las teorías expuestas en esta obra clásica.`,
+  },
+];

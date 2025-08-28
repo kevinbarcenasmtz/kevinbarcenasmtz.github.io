@@ -24,6 +24,7 @@ import BlogsSection from "../resume/BlogSection";
 import DocsSection from "../resume/DocsSection";
 import PapersSection from "../resume/PapersSection";
 import PDFViewer from "../pdf/pdfViewer";
+import BookList from "../resume/BookList";
 
 type SectionContentProps = {
   sectionId: string;
@@ -122,10 +123,13 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
 
   if (sectionId === "misc") {
     return (
-      <ProjectsIntro
-        title={miscIntro.title}
-        description={miscIntro.description}
-      />
+      <>
+        <ProjectsIntro
+          title={miscIntro.title}
+          description={miscIntro.description}
+        />
+        <BookList />
+      </>
     );
   }
 
