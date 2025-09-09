@@ -122,15 +122,15 @@ export default function SectionContent({ sectionId }: SectionContentProps) {
   }
 
   if (sectionId === "misc") {
-    return (
-      <>
-        <ProjectsIntro
-          title={miscIntro.title}
-          description={miscIntro.description}
-        />
-        <BookList />
-      </>
-    );
+    // return (
+    //   // <>
+    //   //   <ProjectsIntro
+    //   //     title={miscIntro.title}
+    //   //     description={miscIntro.description}
+    //   //   />
+    //   //   <BookList />
+    //   // </>
+    // );
   }
 
   return null;
