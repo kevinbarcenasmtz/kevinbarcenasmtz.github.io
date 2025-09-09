@@ -18,13 +18,13 @@ import {
   mayaLexExperience,
   nahuatLexExperience,
   notesIntro,
-  miscIntro,
+  // miscIntro,
 } from "../../data/portfolio";
 import BlogsSection from "../resume/BlogSection";
 import DocsSection from "../resume/DocsSection";
 import PapersSection from "../resume/PapersSection";
 import PDFViewer from "../pdf/pdfViewer";
-import BookList from "../resume/BookList";
+// import BookList from "../resume/BookList";
 
 type SectionContentProps = {
   sectionId: string;
