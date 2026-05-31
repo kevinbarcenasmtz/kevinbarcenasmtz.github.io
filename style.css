@@ -9,9 +9,11 @@
   --rule: #d9d1c1;
   --accent: #6b4a2b;
 
-  --serif: "Iowan Old Style", "Iowa Old Style", "Palatino Linotype", Palatino,
+  --serif:
+    "Iowan Old Style", "Iowa Old Style", "Palatino Linotype", Palatino,
     "URW Palladio L", "Book Antiqua", Georgia, serif;
-  --sans: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial,
+  --sans:
+    -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial,
     sans-serif;
 
   --measure: 36rem;
@@ -162,7 +164,9 @@ a {
   text-decoration-color: var(--rule);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: text-decoration-color 120ms ease, color 120ms ease;
+  transition:
+    text-decoration-color 120ms ease,
+    color 120ms ease;
 }
 
 a:hover {

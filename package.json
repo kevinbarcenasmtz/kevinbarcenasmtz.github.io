@@ -1,36 +1,15 @@
 {
-  "name": "react-ts",
+  "name": "kevinbarcenasmtz.github.io",
   "private": true,
-  "version": "0.0.0",
-  "homepage": "https://kevinbarcenasmtz.github.io",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "format": "prettier --write ."
-  },
-  "dependencies": {
-    "gh-pages": "^6.3.0",
-    "motion": "^12.12.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "validate": "html-validate index.html 404.html",
+    "format": "prettier --write index.html 404.html style.css README.md",
+    "format:check": "prettier --check index.html 404.html style.css README.md",
+    "check": "npm run validate && npm run format:check"
   },
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.22.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0",
-    "prettier": "3.6.2",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "^8.26.1",
-    "vite": "^6.3.1"
+    "html-validate": "11.4.0",
+    "prettier": "3.8.3"
   }
 }
