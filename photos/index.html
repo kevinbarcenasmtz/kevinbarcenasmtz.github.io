@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>page not found - kevin</title>
-    <meta name="description" content="CS &amp; Linguistics student at UT Austin. Computational linguistics, NLP, and full-stack work." />
+    <title>photos - kevin</title>
+    <meta name="description" content="Photos by me." />
     <meta name="author" content="Kevin Barcenas-Martinez" />
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, nocache" />
     <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate" />
     <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
-    <link rel="canonical" href="https://kevinbarcenasmtz.github.io/404.html" />
+    <link rel="canonical" href="https://kevinbarcenasmtz.github.io/photos/" />
 
-    <meta property="og:title" content="page not found - kevin" />
-    <meta property="og:description" content="cs &amp; linguistics student at ut austin. computational linguistics, nlp, and full-stack work." />
+    <meta property="og:title" content="photos - kevin" />
+    <meta property="og:description" content="photos by me." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kevinbarcenasmtz.github.io/404.html" />
+    <meta property="og:url" content="https://kevinbarcenasmtz.github.io/photos/" />
 
     <link rel="icon" type="image/png" sizes="16x16" href="/enhanced_favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/enhanced_favicon-32x32.png" />
@@ -47,7 +47,7 @@
           </li>
           <li>
             <a href="/photos/"
-              >
+              aria-current="page">
               photos
             </a>
           </li>
@@ -55,9 +55,16 @@
       </nav>
       <main class="content">
         
-<h1>Page not found</h1>
-<p class="subtitle">This page doesn't exist.</p>
-<p><a href="/">Return home</a></p>
+<h1>Photos</h1>
+
+<div class="photo-grid" id="photo-grid">
+  <!--
+    To add a photo, drop the image into src/photos/img/ and add a slot below:
+    <div class="photo-slot" data-src="/photos/img/your-photo.jpg"></div>
+  -->
+</div>
+
+<script src="/js/photos.js"></script>
 
       </main>
     </div>
