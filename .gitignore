@@ -2,6 +2,7 @@
 *.log
 *.local
 node_modules/
+_site/
 
 # Local editor state
 .vscode/

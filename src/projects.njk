@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Projects
+description: Work and research by me.
+permalink: /projects/
+---
+
+<h1>Projects</h1>
+
+<div class="project-list">
+  {% for project in collections.projects %}
+  <article class="entry">
+    <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
+    <p class="meta">
+      {{ project.data.date | dateYear }}
+      {% if project.data.status %} · {{ project.data.status }}{% endif %}
+      {% if project.data.tech %} · <em>{{ project.data.tech }}</em>{% endif %}
+    </p>
+    <p>{{ project.data.description }}</p>
+    {% if project.data.links %}
+    <p class="links">
+      {% set first = true %}
+      {% if project.data.links.github %}
+        <a href="{{ project.data.links.github }}">GitHub</a>
+        {% set first = false %}
+      {% endif %}
+      {% if project.data.links.live %}
+        {% if not first %} &nbsp;·&nbsp; {% endif %}
+        <a href="{{ project.data.links.live }}">Live</a>
+        {% set first = false %}
+      {% endif %}
+      {% if project.data.links.other %}
+        {% if not first %} &nbsp;·&nbsp; {% endif %}
+        <a href="{{ project.data.links.other.url }}">{{ project.data.links.other.label }}</a>
+      {% endif %}
+    </p>
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>

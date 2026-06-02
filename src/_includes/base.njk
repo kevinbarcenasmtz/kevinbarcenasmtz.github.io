@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if title and title != "Home" %}{{ title | lower }} - {% endif %}{{ site.shortName | lower }}</title>
+    <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, nocache" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate" />
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+    <meta property="og:title" content="{% if title %}{{ title | lower }} - {% endif %}{{ site.shortName | lower }}" />
+    <meta property="og:description" content="{% if description %}{{ description | lower }}{% else %}{{ site.description | lower }}{% endif %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ (site.url ~ page.url) | lower }}" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/enhanced_favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/enhanced_favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <nav class="sidebar">
+        <div class="site-name"><a href="/">{{ site.shortName }}</a></div>
+        <ul class="nav-links">
+          <li>
+            <a href="/"
+              {% if page.url == "/" %}aria-current="page"{% endif %}>
+              home
+            </a>
+          </li>
+          <li>
+            <a href="/feed/"
+              {% if page.url | startsWith("/feed") %}aria-current="page"{% endif %}>
+              feed
+            </a>
+          </li>
+          <li>
+            <a href="/projects/"
+              {% if page.url | startsWith("/projects") %}aria-current="page"{% endif %}>
+              projects
+            </a>
+          </li>
+          <li>
+            <a href="/photos/"
+              {% if page.url | startsWith("/photos") %}aria-current="page"{% endif %}>
+              photos
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main class="content">
+        {{ content | safe }}
+      </main>
+    </div>
+  </body>
+</html>

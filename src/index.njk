@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: Home
+---
+
+<h1>Kevin Barcenas</h1>
+<p>
+  Hello!
+</p>
+<p>
+  My name is Kevin. I am a Mexican-American who grew up in central Texas. I graduated with a bachelor's in Computer
+  Science and a bachelor's in Linguistics from the University of Texas at Austin. Throughout my undergrad, I dabbled a bit
+  in everything. I initially started as just a CS major, took a couple of Mexican-American Studies classes, business, and
+  religious studies. Until I arrived as an undergraduate researcher at the Linguistic Research Center. Language and
+  linguistics as a whole became the humanities that contemplated my CS degree.
+</p>
+<p>
+  I am grateful to have been able to be part of many projects, side-hustles, part-time jobs, and research opportunities
+  throughout my four years in Austin. It's shaped my outlook on life, ideologies, and more than anything I was able to
+  make relationships I would not trade for anything in the world.
+</p>
+<p>
+  I'm currently working at Intuit as a software engineer. 
+</p>
+<p class="contact-links">
+  <a href="{{ site.github }}">GitHub</a>
+  &nbsp;·&nbsp;
+  <a href="{{ site.linkedin }}">LinkedIn</a>
+  &nbsp;·&nbsp;
+  <a id="email-link" href="#" rel="nofollow noopener noreferrer">kevin (dot) barcenas (dot) mtz (at) gmail (dot) com</a>
+</p>
+<script>
+  (() => {
+    const emailCodes = [{{ site.emailCharCodes | join(", ") }}];
+    const emailLink = document.getElementById("email-link");
+
+    if (!emailLink || !emailCodes.length) return;
+
+    const emailAddress = String.fromCharCode(...emailCodes);
+    emailLink.href = `mailto:${emailAddress}`;
+  })();
+</script>

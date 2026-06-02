@@ -1,0 +1,52 @@
+# Block all crawlers by default
+User-agent: *
+Disallow: /
+
+# Explicitly block common AI crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+# Optional metadata directives used by some crawlers (not standardized)
+User-agent: *
+Disallow: /
+NoAI: 1
+NoImageAI: 1
+
+# Sitemap (kept for standards compatibility)
+Sitemap: https://kevinbarcenasmtz.github.io/sitemap.xml

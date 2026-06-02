@@ -1,53 +1,176 @@
 # kevinbarcenasmtz.github.io
 
-Personal portfolio for Kevin Barcenas-Martinez.
+Personal site for Kevin Barcenas-Martinez — built with [Eleventy](https://www.11ty.dev/), deployed to GitHub Pages via GitHub Actions.
 
-This site is intentionally static: one HTML file, one CSS file, and root-level assets served directly by GitHub Pages.
+---
+
+## Why this stack
+
+The previous site was a single `index.html`. That works fine until you want a blog feed, an archive of projects, and a photos page — at which point you're either duplicating nav/footer HTML across files by hand or reaching for a build tool.
+
+The goal was to add those things without picking up a frontend framework (no React, no Next.js, no runtime JS except the photo protection script). Eleventy fits that: it reads templates and markdown files, outputs plain `.html` files, and otherwise stays out of the way. The output is the same static HTML that was there before — Eleventy is only involved at build time.
+
+**Obsidian + Enveloppe** handles the writing workflow. Posts are written in Obsidian as normal notes, and the Enveloppe plugin pushes them to `src/feed/` as markdown files on demand. No CMS, no admin UI.
+
+**GitHub Actions** runs `eleventy` on every push to `main` and deploys the `_site/` output to the `gh-pages` branch. GitHub Pages serves from that branch. The source files (templates, markdown, CSS) stay on `main`; the build output never touches `main`.
+
+---
 
 ## Structure
 
-- `index.html` - portfolio content and metadata
-- `style.css` - typography, layout, responsive styles, and dark-mode colors
-- `404.html` - simple fallback page
-- `sitemap.xml` and `robots.txt` - crawler metadata
-- `*.png` and `*.pdf` - favicons and linked documents
+```
+src/
+├── _includes/
+│   ├── base.njk          # Shared HTML shell: <head>, sidebar nav, <main>
+│   └── post.njk          # Layout for individual feed posts and project pages
+├── _data/
+│   └── site.js           # Global data: name, email, GitHub URL, LinkedIn URL
+├── css/
+│   └── style.css         # All styles — layout, typography, dark mode, photo grid
+├── js/
+│   └── photos.js         # Canvas-based photo protection (see Photos section)
+├── static/               # Files copied as-is to the site root (favicons, PDFs)
+├── feed/                 # Markdown posts — Enveloppe writes here from Obsidian
+├── projects/             # Markdown project entries
+├── photos/
+│   └── index.njk         # Photo gallery page
+├── index.njk             # Home page (bio + contact)
+├── feed.njk              # Feed index — lists all posts in src/feed/
+└── projects.njk          # Projects archive — lists all entries in src/projects/
+```
 
-## Local Preview
+`.eleventy.js` at the repo root is the Eleventy config. `_site/` is the build output directory (gitignored).
 
-Install the development tools:
+---
+
+## How pages work
+
+Every page sets a `layout` in its frontmatter:
+
+```yaml
+---
+layout: base.njk
+title: Feed
+---
+```
+
+`base.njk` provides the full HTML shell with the sidebar nav. It reads from `src/_data/site.js` (via the `site` variable) for the site name, contact links, and URL. The active nav item is highlighted by comparing `page.url` against each nav link.
+
+`post.njk` sets its own `layout: base.njk` and wraps content in an `<article>` with a header showing the title and date. Individual posts and project pages use `layout: post.njk`.
+
+---
+
+## Adding a feed post (normal workflow)
+
+1. Write a note in Obsidian with this frontmatter at the top:
+   ```yaml
+   ---
+   title: Your post title
+   date: 2026-01-15
+   description: One sentence summary (optional, used in og:description)
+   ---
+   ```
+2. In Obsidian, open the Enveloppe plugin and publish the note.
+3. Enveloppe commits the markdown file to `src/feed/` on the `main` branch.
+4. GitHub Actions picks up the push, builds the site, and deploys.
+
+The feed index (`/feed/`) is generated automatically — it reads the `posts` collection (all `.md` files in `src/feed/`) sorted newest-first.
+
+---
+
+## Adding a project
+
+Create a new markdown file in `src/projects/`. The filename becomes the URL slug (`src/projects/my-project.md` → `/projects/my-project/`).
+
+Frontmatter fields:
+
+```yaml
+---
+layout: post.njk
+title: Project Name
+date: 2025-06-01           # used for sort order on the archive page
+status: actively maintained # optional — shown next to the year
+tech: TypeScript, Postgres  # optional — shown in the meta line
+description: One sentence shown on the archive index.
+links:
+  github: https://github.com/...   # optional
+  live: https://...                # optional
+  other:                           # optional third link
+    url: https://...
+    label: Link text
+---
+
+Full project write-up in markdown goes here.
+```
+
+---
+
+## Adding photos
+
+1. Drop image files into `src/photos/img/`.
+2. Open `src/photos/index.njk` and add a slot for each image:
+   ```html
+   <div class="photo-slot" data-src="/photos/img/your-photo.jpg"></div>
+   ```
+3. Push. The GitHub Action rebuilds and deploys.
+
+### How photo protection works
+
+Photos are never placed in `<img>` tags. Instead, `src/js/photos.js` reads the `data-src` attribute on each `.photo-slot` div, draws the image onto an HTML `<canvas>` element, and discards the original `Image` object. A CSS `::after` overlay sits on top of each slot.
+
+The result:
+- Right-click → Save Image is blocked on canvas elements (context menu is preventDefault'd)
+- Drag-to-desktop is blocked
+- The CSS overlay intercepts pointer events, making drag harder
+- `wget` / `curl` on the page URL gets HTML with no `<img src>` to follow
+
+This isn't cryptographically unbreakable — someone with DevTools can find the URL — but it stops casual downloading and most automated scrapers.
+
+---
+
+## Local development
 
 ```sh
 npm install
+npm run serve     # builds and watches at http://localhost:8080
 ```
 
-Serve the directory with any static file server:
+To just build once:
 
 ```sh
-python3 -m http.server 8000
+npm run build     # outputs to _site/
 ```
 
-Then visit `http://localhost:8000`.
-
-## Checks
-
-Validate and format-check the static files:
-
-```sh
-npm run check
-```
-
-Format the static files:
-
-```sh
-npm run format
-```
+---
 
 ## Deployment
 
-This repository is a GitHub user-pages repository. GitHub Pages should serve from:
+On every push to `main`, the GitHub Action at `.github/workflows/deploy.yml`:
 
-- Source: `Deploy from a branch`
-- Branch: `main`
-- Folder: `/ (root)`
+1. Installs dependencies (`npm ci`)
+2. Runs `npm run build` (Eleventy → `_site/`)
+3. Pushes `_site/` to the `gh-pages` branch using `peaceiris/actions-gh-pages`
 
-No build step is required.
+**One-time GitHub setup:** go to repo Settings → Pages → set source to `gh-pages` branch, `/ (root)`. After that, every push to `main` auto-deploys.
+
+---
+
+## Enveloppe plugin setup
+
+In the Enveloppe plugin settings in Obsidian:
+
+| Setting | Value |
+|---|---|
+| GitHub username | `kevinbarcenasmtz` |
+| Repository | `kevinbarcenasmtz.github.io` |
+| Branch | `main` |
+| Default upload folder | `src/feed` |
+| File format | Keep markdown |
+
+Notes without the required `title` and `date` frontmatter fields will build but sort incorrectly on the feed page. Add a template in Obsidian to avoid this.
+
+---
+
+## Editing global site data
+
+Name, bio links, and contact info are in one place: `src/_data/site.js`. Changing a value there updates every page that references it (the nav, home page contact links, og:meta tags).

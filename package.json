@@ -3,13 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "validate": "html-validate index.html 404.html",
-    "format": "prettier --write index.html 404.html style.css README.md",
-    "format:check": "prettier --check index.html 404.html style.css README.md",
-    "check": "npm run validate && npm run format:check"
+    "build": "eleventy",
+    "serve": "eleventy --serve --port 8080",
+    "format": "prettier --write \"src/**/*.{njk,md,css,js}\"",
+    "format:check": "prettier --check \"src/**/*.{njk,md,css,js}\""
   },
   "devDependencies": {
-    "html-validate": "11.4.0",
+    "@11ty/eleventy": "^3.0.0",
     "prettier": "3.8.3"
   }
 }
