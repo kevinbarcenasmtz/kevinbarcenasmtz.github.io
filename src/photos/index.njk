@@ -7,11 +7,20 @@ permalink: /photos/
 
 <h1>Photos</h1>
 
+{% if collections.photos.length == 0 %}
+  <p class="empty">Nothing here yet.</p>
+{% else %}
 <div class="photo-grid" id="photo-grid">
-  <!--
-    To add a photo, drop the image into src/photos/img/ and add a slot below:
-    <div class="photo-slot" data-src="/photos/img/your-photo.jpg"></div>
-  -->
+  {% for photo in collections.photos %}
+    {% if photo.data.image %}
+      <div
+        class="photo-slot"
+        data-src="{{ photo.data.image }}"
+        {% if photo.data.alt %}aria-label="{{ photo.data.alt }}"{% endif %}
+      ></div>
+    {% endif %}
+  {% endfor %}
 </div>
+{% endif %}
 
 <script src="/js/photos.js"></script>

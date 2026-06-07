@@ -67,6 +67,7 @@ title: Feed
    ---
    title: Your post title
    date: 2026-01-15
+   upload: src/feed
    description: One sentence summary (optional, used in og:description)
    ---
    ```
@@ -78,9 +79,81 @@ The feed index (`/feed/`) is generated automatically — it reads the `posts` co
 
 ---
 
+## Obsidian templates
+
+The Feed Post template in Obsidian should stay minimal:
+
+```md
+---
+share: true
+upload: src/feed
+title: <% tp.file.title %>
+date: <% tp.date.now("YYYY-MM-DD") %>
+description: 
+---
+```
+
+Add a second Templater template for project notes, for example `Project.md`:
+
+```md
+---
+share: true
+upload: src/projects
+layout: post.njk
+title: <% tp.file.title %>
+date: <% tp.date.now("YYYY-MM-DD") %>
+status: 
+tech: 
+description: 
+# links:
+#   github: https://github.com/...
+#   live: https://...
+#   other:
+#     url: https://...
+#     label: Link text
+---
+
+## Overview
+
+## What I Built
+
+## Notes
+```
+
+Enveloppe is configured to read the `upload` frontmatter key for the target repository folder. Feed posts use `upload: src/feed`; project notes use `upload: src/projects`. If `upload` is omitted, Enveloppe falls back to `src/feed`.
+
+Add a third template for photo gallery entries, for example `Photo.md`:
+
+```md
+---
+share: true
+upload: src/photos
+permalink: false
+title: <% tp.file.title %>
+date: <% tp.date.now("YYYY-MM-DD") %>
+image: /photos/img/
+alt: 
+description: 
+---
+
+Notes:
+```
+
+Templater is configured for the portfolio workspace in Obsidian:
+
+| Obsidian folder | Template |
+|---|---|
+| `Projects/Portfolio/Feed` | `Feed Post.md` |
+| `Projects/Portfolio/Projects` | `Project.md` |
+| `Projects/Portfolio/Photos` | `Photo.md` |
+
+Each portfolio folder also has an `about this folder.md` note with the local workflow. Those notes use `share: false`, so Enveloppe ignores them.
+
+---
+
 ## Adding a project
 
-Create a new markdown file in `src/projects/`. The filename becomes the URL slug (`src/projects/my-project.md` → `/projects/my-project/`).
+Create a new note in Obsidian under `Projects/Portfolio/Projects`, then publish it with Enveloppe. Enveloppe writes the markdown file to `src/projects/`. The filename becomes the URL slug (`src/projects/my-project.md` → `/projects/my-project/`).
 
 Frontmatter fields:
 
@@ -108,11 +181,16 @@ Full project write-up in markdown goes here.
 ## Adding photos
 
 1. Drop image files into `src/photos/img/`.
-2. Open `src/photos/index.njk` and add a slot for each image:
-   ```html
-   <div class="photo-slot" data-src="/photos/img/your-photo.jpg"></div>
+2. In Obsidian, create a note in `Projects/Portfolio/Photos` using the `Photo.md` template.
+3. Fill in the `image` frontmatter with the public path, for example:
+   ```yaml
+   image: /photos/img/your-photo.jpg
+   alt: Short image description
    ```
-3. Push. The GitHub Action rebuilds and deploys.
+4. Publish the note with Enveloppe.
+5. Push. The GitHub Action rebuilds and deploys.
+
+The photos index (`/photos/`) is generated automatically — it reads the `photos` collection (all `.md` files in `src/photos/`) sorted newest-first. Photo notes use `permalink: false`, so they populate the gallery without creating individual public pages.
 
 ### How photo protection works
 

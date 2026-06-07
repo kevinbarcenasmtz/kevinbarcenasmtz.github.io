@@ -32,6 +32,11 @@ export default function (eleventyConfig) {
       .getFilteredByGlob("src/projects/**/*.md")
       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
   );
+  eleventyConfig.addCollection("photos", (api) =>
+    api
+      .getFilteredByGlob("src/photos/**/*.md")
+      .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+  );
 
   return {
     dir: {
