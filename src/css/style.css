@@ -367,6 +367,98 @@ a:hover {
   z-index: 1;
 }
 
+/* ── Eye Figure ── */
+
+.eye-figure {
+  position: fixed;
+  right: 1rem;
+  bottom: 0.75rem;
+  z-index: 10;
+  width: clamp(3.5rem, 12vw, 5.25rem);
+  pointer-events: auto;
+}
+
+.eye-figure__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0.35rem 0.65rem rgb(31 29 26 / 0.12));
+  pointer-events: none;
+}
+
+.eye-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 0.75rem;
+  z-index: 9;
+  width: min(78vw, 32rem);
+  transform: translateX(-50%);
+  pointer-events: auto;
+}
+
+.eye-banner__art,
+.eye-banner__tracker {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.eye-banner__tracker {
+  position: absolute;
+  inset: 0;
+}
+
+.eye-banner__note {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.45rem);
+  width: min(22rem, calc(100vw - 2rem));
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--bg-elev);
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translate(-50%, 0.25rem);
+  transition: opacity 140ms ease, transform 140ms ease;
+  pointer-events: none;
+  box-shadow: 0 0.45rem 1rem rgb(31 29 26 / 0.12);
+}
+
+.eye-banner:hover .eye-banner__note {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.eye-figure__note {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.45rem);
+  width: min(22rem, calc(100vw - 2rem));
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--bg-elev);
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translateY(0.25rem);
+  transition: opacity 140ms ease, transform 140ms ease;
+  pointer-events: none;
+  box-shadow: 0 0.45rem 1rem rgb(31 29 26 / 0.12);
+}
+
+.eye-figure:hover .eye-figure__note {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ── Misc ── */
 
 em, i { font-style: italic; }
@@ -389,8 +481,35 @@ code {
 @media (max-width: 599px) {
   html { font-size: 16px; }
 
+  .layout {
+    padding-bottom: 4.75rem;
+  }
+
+  .eye-banner {
+    display: none;
+  }
+
+  .eye-figure {
+    right: 0.65rem;
+    bottom: 0.55rem;
+    width: 2.85rem;
+  }
+
+  .eye-banner__note,
+  .eye-figure__note {
+    width: min(18rem, calc(100vw - 1.5rem));
+    font-size: 0.68rem;
+  }
+
   .post-list li {
     flex-direction: column;
     gap: 0.15rem;
+  }
+}
+
+@media (hover: none) {
+  .eye-banner__note,
+  .eye-figure__note {
+    display: none;
   }
 }
