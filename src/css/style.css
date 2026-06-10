@@ -66,8 +66,13 @@ body {
   .layout {
     flex-direction: row;
     padding: var(--pad);
+    padding-bottom: 17rem;
     max-width: calc(var(--sidebar-w) + var(--gap) + var(--content-max) + var(--pad) * 2);
-    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    /* shift left so content area center aligns with viewport/banner center */
+    margin-left: max(0px, calc((100vw - 1.5 * var(--sidebar-w) - 1.5 * var(--gap) - var(--content-max) - var(--pad) * 2) / 2));
   }
 }
 
@@ -216,6 +221,75 @@ a {
 a:hover {
   color: var(--accent);
   text-decoration-color: var(--accent);
+}
+
+/* ── Name heading icon ── */
+
+.name-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.name-icon {
+  display: inline-block;
+  width: 1.2em;
+  height: auto;
+  vertical-align: middle;
+  flex-shrink: 0;
+  mix-blend-mode: multiply;
+}
+
+@media (prefers-color-scheme: dark) {
+  .name-icon {
+    filter: invert(1);
+    mix-blend-mode: screen;
+  }
+}
+
+.name-icon--home     { width: 1.6em; }
+.name-icon--feed     { width: 1.8em; }
+.name-icon--projects { width: 1.8em; }
+.name-icon--photos   { width: 1.1em; }
+.name-icon--sorpresa { width: 1.5em; }
+
+/* ── Hand button ── */
+
+.hand-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 0;
+  cursor: pointer;
+  display: block;
+  width: 1.7rem;
+  align-self: center;
+}
+
+@media (min-width: 600px) {
+  .hand-btn {
+    margin-top: 1.75rem;
+    align-self: flex-end;
+  }
+}
+
+.hand-btn__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+  transition: transform 90ms ease;
+}
+
+.hand-btn:active .hand-btn__img {
+  transform: scale(0.88);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hand-btn__img {
+    filter: invert(1);
+    mix-blend-mode: screen;
+  }
 }
 
 /* ── Home ── */
@@ -457,6 +531,47 @@ a:hover {
 .eye-figure:hover .eye-figure__note {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── Sorpresa ── */
+
+.sorpresa-centerpiece {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.sorpresa-owl {
+  width: clamp(7rem, 30vw, 12rem);
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sorpresa-owl {
+    filter: invert(1);
+    mix-blend-mode: screen;
+  }
+}
+
+/* ── Attribution ── */
+
+.attribution {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.82rem;
+  font-family: var(--sans);
+  color: var(--ink-mute);
+  line-height: 1.55;
+}
+
+.attribution p {
+  margin: 0 0 0.4rem;
+}
+
+.attribution p:last-child {
+  margin-bottom: 0;
 }
 
 /* ── Misc ── */
