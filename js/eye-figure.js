@@ -17,7 +17,10 @@
   }
 
   function pointEye(event) {
-    if (typeof event.clientX !== "number" || typeof event.clientY !== "number") {
+    if (
+      typeof event.clientX !== "number" ||
+      typeof event.clientY !== "number"
+    ) {
       return;
     }
 
