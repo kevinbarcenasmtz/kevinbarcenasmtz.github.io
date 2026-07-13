@@ -5,6 +5,17 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/photos/img");
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
 
+  // Enveloppe uploads post attachments to src/static/img (served at /img/) but
+  // writes the markdown links as bare, page-relative filenames. Rewrite those
+  // relative <img> srcs to /img/ so they resolve to where the files actually are.
+  eleventyConfig.addTransform("fixEmbedImagePaths", (content, outputPath) => {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+    return content.replace(
+      /(<img\b[^>]*?\bsrc=")(?!\/|https?:|data:|#)([^"]+)(")/gi,
+      (match, pre, src, post) => `${pre}/img/${src}${post}`
+    );
+  });
+
   // Filters
   eleventyConfig.addFilter("dateFormat", (date) =>
     new Date(date).toLocaleDateString("en-US", {
