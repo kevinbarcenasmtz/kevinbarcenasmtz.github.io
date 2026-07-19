@@ -1,43 +1,16 @@
 # kevinbarcenasmtz.github.io
 
-Personal site for Kevin Barcenas-Martinez — built with [Eleventy](https://www.11ty.dev/), deployed to GitHub Pages via GitHub Actions.
+Personal site built with [Eleventy](https://www.11ty.dev/), deployed to GitHub Pages via GitHub Actions.
 
 ---
 
-## Why this stack
-
-The previous site was a single `index.html`. That works fine until you want a blog feed, an archive of projects, and a photos page — at which point you're either duplicating nav/footer HTML across files by hand or reaching for a build tool.
-
-The goal was to add those things without picking up a frontend framework (no React, no Next.js, no runtime JS except the photo protection script). Eleventy fits that: it reads templates and markdown files, outputs plain `.html` files, and otherwise stays out of the way. The output is the same static HTML that was there before — Eleventy is only involved at build time.
-
-**Obsidian + Enveloppe** handles the writing workflow. Posts are written in Obsidian as normal notes, and the Enveloppe plugin pushes them to `src/feed/` as markdown files on demand. No CMS, no admin UI.
+**Obsidian + Enveloppe** handles the writing workflow. Posts are written in Obsidian as normal notes, and the Enveloppe plugin pushes them to `src/feed/` as markdown files on demand.
 
 **GitHub Actions** runs `eleventy` on every push to `main` and deploys the `_site/` output to the `gh-pages` branch. GitHub Pages serves from that branch. The source files (templates, markdown, CSS) stay on `main`; the build output never touches `main`.
 
 ---
 
 ## Structure
-
-```
-src/
-├── _includes/
-│   ├── base.njk          # Shared HTML shell: <head>, sidebar nav, <main>
-│   └── post.njk          # Layout for individual feed posts and project pages
-├── _data/
-│   └── site.js           # Global data: name, email, GitHub URL, LinkedIn URL
-├── css/
-│   └── style.css         # All styles — layout, typography, dark mode, photo grid
-├── js/
-│   └── photos.js         # Canvas-based photo protection (see Photos section)
-├── static/               # Files copied as-is to the site root (favicons, PDFs)
-├── feed/                 # Markdown posts — Enveloppe writes here from Obsidian
-├── projects/             # Markdown project entries
-├── photos/
-│   └── index.njk         # Photo gallery page
-├── index.njk             # Home page (bio + contact)
-├── feed.njk              # Feed index — lists all posts in src/feed/
-└── projects.njk          # Projects archive — lists all entries in src/projects/
-```
 
 `.eleventy.js` at the repo root is the Eleventy config. `_site/` is the build output directory (gitignored).
 
@@ -75,7 +48,7 @@ title: Feed
 3. Enveloppe commits the markdown file to `src/feed/` on the `main` branch.
 4. GitHub Actions picks up the push, builds the site, and deploys.
 
-The feed index (`/feed/`) is generated automatically — it reads the `posts` collection (all `.md` files in `src/feed/`) sorted newest-first.
+The feed index (`/feed/`) is generated automatically, it reads the `posts` collection (all `.md` files in `src/feed/`) sorted newest-first.
 
 ---
 

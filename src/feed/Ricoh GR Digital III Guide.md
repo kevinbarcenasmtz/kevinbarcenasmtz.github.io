@@ -6,7 +6,7 @@ date: 2026-07-10
 description: A extremely beginner's guide to how to best use the Ricoh, best settings, and overall helpful tips.
 ---
 
-I want to preface that most of the content below is directly from **SnapsByFox**. They have some amazing guides/blogs that really eases the learning curve one might have getting into photography. Please consider reading their blogs, supporting them, and buying their guides. I can only imagine the quality of their guides if their blogs are this good. Their webpage is: https://www.snapsbyfox.com/blog.  I'm merely adopting their content to be super verbose and explain to beginners.
+I want to preface that most of the content below is directly from **SnapsByFox**. They have some amazing guides/blogs that really eases the learning curve one might have getting into photography. Please consider reading their blogs, supporting them, and buying their guides. I can only imagine the quality of their guides if their blogs are this good. Their webpage is: [SnapsByFox](https://www.snapsbyfox.com/blog).  I'm merely adopting their content to be super verbose and explainable to beginners.
 
 ---
 
@@ -22,7 +22,7 @@ I want to preface that most of the content below is directly from **SnapsByFox**
 
 In the back view of the camera you can see that there's text labels **Fn1** and **Fn2**, these two labels stand for **Function**. There typical use case is to provide extra functionality to buttons that might not be used frequently, providing the user more flexibility in mapping different functions to those buttons. The usual place to change them is through navigating: **Menu > Customize Setting > Fn Button Setting**. Some useful functions mapped to those buttons could be:
 
-- **Fn1**: Snap Focus (more on what this and the below mappings do later) [Explanation](Ricoh%20GR%20Digital%20III%20Guide.md#^35628c) ^57ccb5
+<p id="57ccb5"><strong>Fn1</strong>: Snap Focus (more on what this and the below mappings do later) <a href="#35628c">Explanation</a></p>
 
 Note for the one's below, I'm not 100% sure if the camera in picture has these buttons available to be mapped to different functions. The point stands that you can map **Fn1** and **Fn2** to any of the functionality  below.
 - **ISO Button**: ND
@@ -32,7 +32,7 @@ Note for the one's below, I'm not 100% sure if the camera in picture has these b
 
 ---
 
-*Note the below image of settings is from a different model of the Ricoh GRIII camera. Credit to: https://www.snapsbyfox.com/blog/ricoh-griii-/-griiix-photography-settings-set-up-guide for all the images of the setting menus*
+*Note the below image of settings is from a different model of the Ricoh GRIII camera. Credit to: [SnapsByFox](https://www.snapsbyfox.com/blog/ricoh-griii-/-griiix-photography-settings-set-up-guide) for all the images of the setting menus*
 
 ![1000x800](Ricoh%20GR%20Digital%20III%20Guide-1783738970394.webp)
 
@@ -68,9 +68,9 @@ Below are a few settings that are scattered around the camera that I think are v
 
 ---
 
-**Snap Focus** ^35628c
+<p id=35628c><a href="#35628c">Snap Focus</a></p>
 
-One of the key features of the Ricoh GRIII and GRIIIx is **Snap Focus**. This is a feature that allows you to focus to and lock on a specific distance. There are two key ways to interact with this feature: selecting the **snap distance**, and **activating Snap Focus**. You should probably map it to **Fn1** ([see above](Ricoh%20GR%20Digital%20III%20Guide.md#^57ccb5)). 
+One of the key features of the Ricoh GRIII and GRIIIx is **Snap Focus**. This is a feature that allows you to focus to and lock on a specific distance. There are two key ways to interact with this feature: selecting the **snap distance**, and **activating Snap Focus**. You should probably map it to **Fn1** <a href="#57ccb5">see above.</a>
 
 To set up the snap distance, use the **ADJ Menu** that pops up when you push in the rear dial. This gives you a very easy and direct way to change snap distance without having to utilize another custom button or go diving through the main menu. To set this up go to **Menu > Customise Setting > ADJ Mode Setting**. Here you can assign any of the five available options. If you plan to use it a lot, then set it to the first one.
 
@@ -124,7 +124,7 @@ Below is some pre-defined settings that one can use for specific use-cases such 
 
 1. **Photography Settings - Exposure**
 
-Shooting in **aperture priority (AP)**. This gives the user control over the depth of field and impacts the image drastically. One can start at around f5.6 if the light is good and then adjust up or down depending on light and how much of the scene they want in focus. You can set the Auto ISO between 100 and 6400 with the minimum shutter speed around 1/200. Then use the Multi-Segment exposure mode for most scenarios. Sometimes you may want to create slow shutter speed effects, so for this, change the mode to shutter priority and reduce the shutter speed to around 1/25. If shooting on a sunny day, you can also turn the ND filter on to help control the light coming in.
+Shooting in **aperture priority (AP)**. This gives the user control over the depth of field and impacts the image drastically. One can start at around *f5.6* if the light is good and then adjust up or down depending on light and how much of the scene they want in focus. You can set the Auto ISO between *100* and *6400* with the minimum shutter speed around *1/200*. Then use the Multi-Segment exposure mode for most scenarios. Sometimes you may want to create slow shutter speed effects, so for this, change the mode to shutter priority and reduce the shutter speed to around *1/25*. If shooting on a sunny day, you can also turn the ND filter on to help control the light coming in.
 
 ![1000x800](Ricoh%20GR%20Digital%20III%20Guide-1783743171395.webp)
 
@@ -136,7 +136,7 @@ The Ricoh GRIII comes with a generous selection of focus modes. With that said, 
 
 ---
 
-The following are from https://dantesisofo.com, he made a very detailed PDF about general recipes one can use to get some amazing shots. Here's the full PDF: https://dantesisofo.com/wp-content/uploads/2025/04/My-Ricoh-GR-Camera-Settings-for-Street-Photography.pdf
+The following are from [Dante Sisofo](https://dantesisofo.com), he made a very detailed PDF about general recipes one can use to get some amazing shots. Here's the full [PDF](https://dantesisofo.com/wp-content/uploads/2025/04/My-Ricoh-GR-Camera-Settings-for-Street-Photography.pdf)
 
 **Default Shooting Mode**
 - **Mode**: Aperture Priority (A)
@@ -214,7 +214,7 @@ Toggle between Snap Focus and Single Point AF
 
 ---
 
-Another technical settings from Eric Kim's [blog](https://erickimphotography.com/blog/2022/02/25/the-best-ricoh-gr-iii-ricoh-gr-iiix-technical-settings/)
+More technical settings from Eric Kim's [blog](https://erickimphotography.com/blog/2022/02/25/the-best-ricoh-gr-iii-ricoh-gr-iiix-technical-settings/)
 
 - P ([Program](https://erickimphotography.com/blog/2016/04/18/in-favor-of-p-program-mode-in-photography/)) mode
 - [Autofocus](https://erickimphotography.com/blog/2022/02/25/autofocus-over-manual-focus/) (default)
@@ -225,7 +225,7 @@ Another technical settings from Eric Kim's [blog](https://erickimphotography.com
 - Customize settings: Instant review (OFF)
 - Grid style: 4×4 Grid
 - Shooting info display: Just turn on the grid guide (press DISP on the back-right button of the RICOH GR III/X to scroll through the display shooting modes)
-- Image Control: Hi/BW (high contrast black and white): press FN button to customize Contrast +4, Contrast highlight/contrast shadows to +4, Sharpness +4, Grain Effect 3)
+- Image Control: Hi/BW (high contrast black and white): press FN button to customize Contrast +4, Contrast highlight/contrast shadows to +4, Sharpness +4, Grain Effect 3
 
 ---
 
