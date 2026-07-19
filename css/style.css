@@ -213,6 +213,21 @@ p:last-child {
   margin-bottom: 0;
 }
 
+/* ── Blockquotes (Obsidian-style callout) ── */
+
+blockquote {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1.1rem;
+  background: var(--bg-elev);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  color: var(--ink-soft);
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
 .subtitle {
   font-style: italic;
   color: var(--ink-soft);
