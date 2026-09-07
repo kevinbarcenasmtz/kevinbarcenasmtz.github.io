@@ -32,7 +32,7 @@ The `triage-ded` skill draws a specific distinction here:
 - **Parser-side fix** (changes what gets pulled out of the raw HTML) → the corpus is now stale and **does** need regenerating, because the old cleaned file doesn't reflect the fix.
 - **Matcher-side fix** (changes only how already-parsed Starling forms are compared against the DEDR corpus, e.g. normalization rules) → the corpus itself hasn't changed at all, so regenerating it would be a no-op ("zero-diff") and is explicitly skipped.
 
-![DravidiLex Pilot 2026-09-05 01.07.36.excalidraw](DravidiLex%20Pilot%202026-09-05%2001.07.36.excalidraw)
+![DravidiLex Pilot 2026-09-05 01.07.36.svg](DravidiLex%20Pilot%202026-09-05%2001.07.36.svg)
 
 I wanted to walk through a real skill invocation. In this example, two rows were flagged as mismatches during validation.
  
