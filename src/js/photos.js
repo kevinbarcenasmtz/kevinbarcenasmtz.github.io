@@ -119,6 +119,15 @@
         canvas.style.cssText = "max-width:100%;height:auto;display:block;";
         protectCanvas(canvas);
         slot.appendChild(canvas);
+
+        // Photo-set pages: click a photo to expand it. The listener goes on
+        // the slot because its ::after overlay swallows clicks on the canvas.
+        if (grid.hasAttribute("data-zoom")) {
+          slot.classList.add("zoomable");
+          slot.addEventListener("click", () => {
+            if (!canvas.classList.contains("is-zoomed")) openZoom(canvas);
+          });
+        }
       };
 
       img.src = slot.dataset.src;

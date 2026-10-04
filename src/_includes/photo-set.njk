@@ -1,0 +1,22 @@
+---
+layout: base.njk
+---
+<article class="post">
+  <header class="post-header">
+    <p class="meta"><a href="/photos/">&larr;</a></p>
+    <h1>{{ title }}</h1>
+    <p class="meta">{{ page.date | dateFormat }}</p>
+    {% if description %}<p class="meta">{{ description }}</p>{% endif %}
+  </header>
+  {% if content | trim %}
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+  {% endif %}
+  <div class="photo-grid photo-grid--set" id="photo-grid" data-zoom>
+    {% for src in images %}
+      <div class="photo-slot" data-src="{{ src }}"></div>
+    {% endfor %}
+  </div>
+</article>
+<script src="/js/photos.js"></script>

@@ -29,7 +29,7 @@ export default function (eleventyConfig) {
     new Date(date).getUTCFullYear()
   );
   eleventyConfig.addFilter("startsWith", (str, prefix) =>
-    str.startsWith(prefix)
+    typeof str === "string" && str.startsWith(prefix)
   );
 
   // Collections

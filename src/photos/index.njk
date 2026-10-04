@@ -1,26 +1,19 @@
 ---
 layout: base.njk
 title: Photos
-description: Photos by me.
+description: Some photos I've taken
 permalink: /photos/
 ---
 
 <h1 class="name-heading">Photos<img src="/drop.svg" class="name-icon name-icon--photos" alt=""></h1>
 
-{% if collections.photos.length == 0 %}
-  <p class="empty">Nothing here yet.</p>
-{% else %}
-<div class="photo-grid" id="photo-grid">
+<ol class="post-list" reversed>
   {% for photo in collections.photos %}
-    {% if photo.data.image %}
-      <div
-        class="photo-slot"
-        data-src="{{ photo.data.image }}"
-        {% if photo.data.alt %}aria-label="{{ photo.data.alt }}"{% endif %}
-      ></div>
+    {% if photo.url %}
+      <li>
+        <a href="{{ photo.url }}">{{ photo.data.title }}</a>
+        <span class="date">{{ photo.date | dateFormat }}</span>
+      </li>
     {% endif %}
   {% endfor %}
-</div>
-{% endif %}
-
-<script src="/js/photos.js"></script>
+</ol>
