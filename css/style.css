@@ -531,7 +531,7 @@ body.img-zoom-lock {
 /* ── Photos ── */
 
 .photo-grid {
-  display: grid;
+  display: row;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 0.75rem;
   user-select: none;
@@ -547,6 +547,14 @@ body.img-zoom-lock {
 .photo-slot {
   position: relative;
   overflow: hidden;
+}
+
+.photo-slot.zoomable {
+  cursor: zoom-in;
+}
+
+.photo-grid--set {
+  margin-top: 2rem;
 }
 
 /* Transparent overlay blocks most drag/right-click targets */
